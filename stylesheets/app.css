@@ -1109,44 +1109,66 @@ OVERLAYS
 /* --------------------------------------------
 BACK TO TOP
 ----------------------------------------------*/
-/* line 817, ../sass/app.scss */
+/* line 818, ../sass/app.scss */
 .backtotop {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  /* image replacement properties */
+  right: 2rem;
+  bottom: 3rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: none;
+  z-index: 2000;
+  background-color: #00728e;
+  transition: transform 0.3s;
   overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: #004455 url(https://codyhouse.co/demo/back-to-top/img/cd-top-arrow.svg) no-repeat center 50%;
+  border-radius: 5px;
+}
+/* line 831, ../sass/app.scss */
+.backtotop:before, .backtotop:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 20px;
+  background-color: #fff;
+  height: 20px;
+  width: 5px;
+}
+/* line 841, ../sass/app.scss */
+.backtotop:before {
+  transform: rotate(-45deg);
+  left: 34px;
+}
+/* line 846, ../sass/app.scss */
+.backtotop:after {
+  transform: rotate(45deg);
+  right: 33px;
+}
+/* line 850, ../sass/app.scss */
+.backtotop:focus {
+  outline: none;
+}
+/* line 853, ../sass/app.scss */
+.backtotop.not-visible {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  display: none;
 }
-/* line 835, ../sass/app.scss */
-.backtotop .btop-is-visible {
-  /* the button becomes visible */
+/* line 858, ../sass/app.scss */
+.backtotop.visible {
+  display: inline-block !important;
   visibility: visible !important;
-  opacity: 1 !important;
+  opacity: 0.9 !important;
 }
-/* line 840, ../sass/app.scss */
-.backtotop .btop-fade-out {
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .5;
-}
-/* line 844, ../sass/app.scss */
+/* line 863, ../sass/app.scss */
 .backtotop:hover {
   background-color: #004455;
-  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* line 900, ../sass/app.scss */
+/* line 931, ../sass/app.scss */
 .reveal-from-bottom {
   transform: translateY(0);
   opacity: 1;

@@ -1,6 +1,7 @@
+(() => {
 $(document).foundation()
 
-(() => {
+
 //Mobile Menu Icon Toggle
 document.querySelector('.mobile-icon').addEventListener('click', function() {
   mobileIcon = document.querySelector('.mobile-icon');
@@ -17,8 +18,7 @@ document.querySelector('.js-off-canvas-overlay').addEventListener('click', funct
 window.addEventListener('scroll', function(){
   header = document.querySelector('header');
   btButton = document.querySelector('.backtotop');
-  offset = 300;
-  offset_opacity = 1200;
+  offset = 500;
   scrollpos = window.scrollY;
 
   if(scrollpos > 50){
@@ -31,28 +31,12 @@ window.addEventListener('scroll', function(){
   }
 
   if (scrollpos > offset) {
-    btButton.classList.add("cd-is-visible");
+    btButton.classList.remove("not-visible");
+    btButton.classList.add("visible");
   } else {
-    btButton.classList.remove("cd-is-visible cd-fade-out");
-  }
-  if (scrollpos > offset_opacity) {
-    btButton.classList.add("btop-fade-out");
+    btButton.classList.remove("visible");
+    btButton.classList.add("not-visible");
   }
 });
-
-//Back to Top
-var scroll_top_duration = 700;
-
-
-
-
-  // function backToTop() {
-  //   if (window.pageYOffset > 0) {
-  //     window.scrollBy(0, -80);
-  //     setTimeout(backToTop, 0);
-  //   }
-  // }
-
-  btButton.addEventListener('click', backToTop);
 
 })();
