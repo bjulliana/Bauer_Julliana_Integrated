@@ -1,0 +1,100 @@
+//colors
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$transparentBlack: rgba(0, 0, 0, 0.1);
+$lightBlue: rgba(0, 114, 142, 1);
+$darkBlue: rgba(0, 68, 85, 1);
+$shadow: rgba(0, 0, 0, 0.35);
+$lightGray: rgba(245, 245, 245, 1);
+$mediumGray: rgba(224, 224, 224, 1);
+
+//fonts
+$bodyFont: 'Lato', sans-serif;
+$titleFont: 'Electrolize', sans-serif;;
+
+//Mixins
+@mixin bodyFont() {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+  line-height: 1.74;
+}
+
+@mixin pos($position, $top:null, $right:null, $bottom:null, $left:null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin tEase() {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@mixin formField(){
+  font-family: $titleFont;
+	font-size: 0.9rem;
+	letter-spacing: 0.05em;
+	color: $black;
+	font-weight: 300;
+	line-height: 1.7;
+	width: 100%;
+	padding: 0.9em;
+	margin: 0 0 1.2em;
+	outline: none;
+	height: auto;
+	border: 1px solid $mediumGray;
+	background-color: $white;
+}
+
+@mixin tDelay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
+}
+
+@mixin tOrigin($origin...){
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin scaleXtransY($x:null, $y:null){
+  -webkit-transform: scaleX($x) translateY($y);
+  -moz-transform: scaleX($x) translateY($y);
+  -ms-transform: scaleX($x) translateY($y);
+  -o-transform: scaleX($x) translateY($y);
+  transform: scaleX($x) translateY($y);
+}
+
+@mixin tTransform ($transform...) {
+  -webkit-transition: -webkit-transform $transform;
+  -moz-transition: -moz-transform $transform;
+  transition: transform $transform;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+@mixin tDuration($duration...) {
+  -webkit-transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin tProperty() {
+  -webkit-transition-property: margin, -webkit-transform;
+  transition-property: margin, transform;
+}
+
+@mixin tRotate($rotate){
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
