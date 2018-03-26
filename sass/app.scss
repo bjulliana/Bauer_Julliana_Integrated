@@ -97,7 +97,7 @@ h4 {
 	font-style: normal;
 	font-weight: 300;
 	color: $black;
-	font-size: 1.4rem;
+	font-size: 1.125rem;
 	em:after {
 		height: 0.4rem;
 		bottom: 0.3rem;
@@ -185,15 +185,11 @@ section {
 	padding: 1em;
 }
 .sectionTitle {
-	margin-top: 5rem;
+	padding: 2rem 0;
 }
-.show-for-small-only {
-	.sectionTitle {
-		margin-top: 2rem;
-	}
-	.cell {
-		padding: 2rem;
-	}
+
+.dark-bg {
+	background-color: $lightBlue;
 }
 /* --------------------------------------------
 HEADER SECTION
@@ -359,7 +355,6 @@ header {
 	}
 }
 
-
 /* --------------------------------------------
 VIDEO COVER
 ----------------------------------------------*/
@@ -380,22 +375,7 @@ video {
 }
 .button {
   @include transition(all 0.3s ease);
-	font-family: $titleFont;
-	font-size: 0.8rem;
-	color: $lightBlue;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: 0.05em;
-	display: inline-block;
-	padding: 0.763em 2.5em 0.7em;
-	cursor: pointer;
 	position: relative;
-	text-decoration: none !important;
-	text-transform: uppercase;
-	text-align: center;
-	outline: none;
-	border-radius: 0;
-  background: none;
 	&.play {
 		width: 4.5rem;
 		height: 4.5rem;
@@ -426,6 +406,9 @@ video {
 /* --------------------------------------------
 OVERLAP SECTION
 ----------------------------------------------*/
+.overlap-content {
+	padding-top: 1rem;
+}
 
 .overlap {
 	max-width: 90%;
@@ -574,13 +557,18 @@ GALLERY
 .reveal-overlay {
   background-color: rgba(10,10,10,.85);
   .reveal {
-    margin-top: 10%;
-    overflow-y: visible;
+    margin-top: 35%;
+	overflow-y: visible;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	width: 80%;
+	margin-left: auto;
   }
   .close-button {
     padding: .5rem;
-    line-height: 2.3rem;
-    font-size: 4rem;
+    line-height: 1.5rem;
+    font-size: 2rem;
     color: $white;
     background-color: $darkBlue;
     border-radius: 2rem;
@@ -589,12 +577,12 @@ GALLERY
   }
 }
 
-
 /* --------------------------------------------
 VIDEOS SECTION
 ----------------------------------------------*/
 
 .split-section {
+	// background-image: url('../img/bg-back.png');
 	&.offset-image {
 		padding: 3em;
 	}
@@ -653,6 +641,7 @@ VIDEOS SECTION
 .video-img {
   @include pos(fixed, 0, null, null, 0);
 	width: 100%;
+	height: 100%;
 }
 .play:hover {
 	background: $darkBlue;
@@ -662,6 +651,9 @@ VIDEOS SECTION
 	cursor: pointer;
 }
 
+#video_section .cell {
+	padding-bottom: 1.5rem;
+}
 /* --------------------------------------------
 CONTACT SECTION
 ----------------------------------------------*/
@@ -684,31 +676,25 @@ input::placeholder {
 .form {
 	margin-bottom: 4.0em;
 }
-button {
+.button.submit {
+  @include transition(all 0.3s ease);
 	font-family: $titleFont;
 	font-size: 1rem;
 	color: $lightBlue;
 	font-weight: 500;
-	line-height: 1.7;
 	letter-spacing: 0.05em;
-	display: inline-block;
-	padding: 0.79rem 3rem;
-	cursor: pointer;
-	position: relative;
-	text-decoration: none !important;
 	text-transform: uppercase;
 	text-align: center;
-	outline: none;
-	border-radius: 0;
-  background: none;
+	height: 73%;
 	&.filled {
 		color: $white;
-    background: $lightBlue;
-  }
-    &:hover {
-			background: $darkBlue !important;
+		background: $lightBlue;
 	}
-}
+	&:hover {
+		background: $darkBlue !important;
+	}
+}	  
+
 
 /* --------------------------------------------
 FOOTER
@@ -866,70 +852,101 @@ BACK TO TOP
 	}
 }
 
-// /* --------------------------------------------
-// ANIMATIONS
-// ----------------------------------------------*/
+/* --------------------------------------------
+ANNIVERSARY SECTION
+----------------------------------------------*/
 
-// @keyframes fade-in {
-//     from {opacity: 0; transform: scale(.7,.7)}
-//     to {opacity: 1;}
-// }
-// .fade-in {
-//   animation: fade-in 0.5s;
-// }
-  
-  
-//   @media only screen and (min-width: 768px) {
-// 	.cd-top {
-// 	  right: 20px;
-// 	  bottom: 20px;
-// 	}
-//   }
-//   @media only screen and (min-width: 1024px) {
-// 	.cd-top {
-// 	  height: 60px;
-// 	  width: 60px;
-// 	  right: 30px;
-// 	  bottom: 30px;
-// 	}
-//   }
+#anniversary .sectionTitle {
+	margin-bottom: 1.5rem;
+}
 
+section#anniversary {
+	padding-bottom: 0em !important;
+}
 
+.box-image {
+	display: flex;
+  	max-width: 100%;
+  	user-select: none;
+}
 
+.imageBoxContainer {
+	position: relative;
+	max-width: 1152px;
+	overflow: hidden;
+	z-index: 1;
+}
 
-// blockquote {
-// 	border: none;
-// 	p {
-// 		font-family: $titleFont;
-// 		font-style: normal;
-// 		font-weight: 300;
-// 		font-size: 1.5em;
-// 		border: none;
-// 	}
-// }
-// .fa-quote-left {
-// 	font-size: 3em;
-// 	opacity: .3;
-// 	position: absolute;
-// 	margin-top: -15px;
-// 	&.first {
-// 		left: 10%;
-// 	}
-// }
-// .quotesArea {
-// 	padding: 20px;
-// }
+.hotspots {
+  @include pos(absolute, 0, 0, 0, 0);
+  overflow: hidden;
+  .hotspot {
+	@include pos(absolute, 0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    &:nth-child( 1 ) .trigger {
+      top: 20%;
+      left: 8%;
+	}
+    &:nth-child( 2 ) .trigger {
+      top: 66%;
+      left: 92%;
+	}
+    &:nth-child( 3 ) .trigger {
+      top: 80%;
+      left: 43%;
+	}
+    .trigger {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      background: $white;
+      color: $darkBlue;
+      border-radius: 50%;
+      transform: translate( -50%, -50% );
+      cursor: pointer;
+      pointer-events: all;
+      box-shadow: 0 0 0 0 $black;
+      transition: box-shadow .4s;
+	  user-select: none;
+	  z-index: 2;
+      &:hover {
+		box-shadow: 0 0 0 8px rgba($white, .5 );
+		}
+	  i {
+		z-index: 2;
+	  }
+	}
+  }
+}
 
-// .caption p.icon-links a:hover {
-// 	color: $white;
-// 	background: $lightBlue;
-// }
-// .backtotop:hover {
-// 	background: $lightBlue;
-// }
+.reveal {
+	figure {
+	background-color: $white;
+	}
+	figcaption {
+		@include pos(absolute, null, null, 0, 0);
+		width: 100%;
+		padding: 16px;
+		background: $lightBlue;
+		color: white;
+	}
+}
 
-.reveal-from-bottom {
-  transform: translateY(0);
-  opacity: 1;
-  @include tTransform(0.4s ease 0.5s, opacity 0.4s ease 0.5s);
+.is-reveal-open body,
+body.is-reveal-open {
+	overflow: inherit !important;
+}
+
+.callaction {
+	padding: 1rem;
+	h3 {
+		font-size: 1.4rem;
+	}
 }

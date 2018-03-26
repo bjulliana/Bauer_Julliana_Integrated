@@ -67,8 +67,27 @@ min-width 40em
 		padding-top: 0;
     }
     .reveal.medium {
-        width: 60%;
-        max-width: 75rem; }
+        // width: 80%;
+		max-width: 75rem; }
+		
+	.reveal.small {
+		width: 40%;
+		max-width: 75rem; }
+
+	.sectionTitle {
+		margin-top: 5rem 0;
+	}
+
+	.callaction {
+		padding: 3rem;
+	}
+	.reveal-overlay .reveal {
+		margin-top: 6%;
+	}
+	.reveal-overlay .close-button {
+		line-height: 2.3rem;
+		font-size: 4rem; 
+	}
 }
 
 /* --------------------------------------------
@@ -95,7 +114,6 @@ min-width 45em
 /* --------------------------------------------
 min-width 50em
 ----------------------------------------------*/
-
 
 @media screen and(min-width: 50em) {
 	#video-background {
@@ -125,7 +143,19 @@ min-width 50em
 	blockquote p {
 		font-size: 2em;
 	}
+	.overlap-content {
+		padding-top: 4rem !important;
+	}		
 }
+
+/* --------------------------------------------
+min-width 56em
+----------------------------------------------*/
+
+.reveal-overlay .reveal {
+	margin-top: 8%;
+}
+
 /* --------------------------------------------
 min-width 60em
 ----------------------------------------------*/
@@ -149,9 +179,6 @@ min-width 64em
 		padding-left: 4em;
 		padding-right: 4em;
 	}
-	section {
-		padding: 5em 0;
-	}
 	#video-background {
 		height: 450px;
 	}
@@ -163,9 +190,6 @@ min-width 64em
 	}
 	header.small .logo {
 		width: 50%;
-    }
-    .contactTitle {
-		padding-bottom: 60px;
 	}
 }
 
