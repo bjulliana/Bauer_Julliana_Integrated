@@ -4,54 +4,30 @@
     var supportsVideo = !!document.createElement('video').canPlayType;
     if (supportsVideo) {
 
-    var videoContainer = document.querySelector('.videoContainer');
-    var videoControls = document.querySelector('#controls');
-    var video = document.querySelector('.videoCover');
+        var videoContainer = document.querySelector('.videoContainer');
+        var videoControls = document.querySelector('#controls');
+        var video = document.querySelector('.videoCover');
+        var coverButton = document.querySelector('.cover_button');
+        var videoPlayer = document.querySelector('video');
+        var lightbox = document.querySelector('.lightbox');
+        var closeLightbox = document.querySelector('.close-lightbox');
 
-    // Create Video Controls
-    var playpause = document.createElement('div');
-        playpause.className = 'playButton';
-        videoControls.appendChild(playpause);
-    var progressContainer = document.createElement('div');
-        progressContainer.className = 'ProgressContainer';
-        videoControls.appendChild(progressContainer);
-    var volumeContainer = document.createElement('div');
-        volumeContainer.className = 'volumeContainer';
-        videoControls.appendChild(volumeContainer);
-    var playIcon = document.createElement('i');
-        playIcon.className = 'fas fa-pause';
-        playpause.appendChild(playIcon);
-        var positionTime = document.createElement('div');
-        positionTime.className = 'timer currentTime';
-        progressContainer.appendChild(positionTime);
-    var progress = document.createElement('div');
-        progress.className = 'progressBar';
-        progressContainer.appendChild(progress);
-    var progressBar = document.createElement('div');
-        progressBar.classList = 'progress';
-        progress.appendChild(progressBar);
-    var videoDuration = document.createElement('div')
-        videoDuration.classList = 'timer totalTime';
-        progressContainer.appendChild(videoDuration);
-    var mute = document.createElement('div');
-        mute.className = 'muteButton';
-        volumeContainer.appendChild(mute);
-    var muteIcon = document.createElement('i');
-        muteIcon.className = 'fas fa-volume-up';
-        mute.appendChild(muteIcon);
-    var volumeBar = document.createElement('input');
-        volumeBar.className = 'volume-bar';
-        volumeBar.setAttribute('type', 'range');
-        volumeBar.setAttribute('min', '0');
-        volumeBar.setAttribute('max', '1');
-        volumeBar.setAttribute('step', '0.1');
-        volumeContainer.appendChild(volumeBar);
-    var fullscreen = document.createElement('div');
-        fullscreen.className = 'scale';
-        videoControls.appendChild(fullscreen);
-    var fullscreenIcon = document.createElement('div');
-        fullscreenIcon.className = 'fas fa-expand';
-        fullscreen.appendChild(fullscreenIcon);
+        // Create Video Controls
+        var parent = document.createElement('div');
+        var controlsString = '<div class="playButton"><i class="fas fa-pause"></i></div><div class="ProgressContainer"><div class="timer currentTime">00:00</div><div class="progressBar"><div class="progress"></div></div><div class="timer totalTime">00:00</div></div><div class="volumeContainer"><div class="muteButton"><i class="fas fa-volume-up"></i></div><input class="volume-bar" type="range" min="0" max="1" step="0.1"></div><div class="scale"><i class="fas fa-expand"></i></div>';
+        videoControls.innerHTML = controlsString;
+        videoControls.appendChild(parent); 
+        
+        var playpause = document.querySelector('.playButton');
+        var playIcon = playpause.querySelector('i');
+        var volume = document.querySelector('.volume');
+        var volumeBar = document.querySelector('.volume-bar');
+        var mute = document.querySelector('.muteButton');
+        var progress = document.querySelector('.progressBar');
+        var progressBar = document.querySelector('.progress');
+        var fullscreen = document.querySelector('.scale');
+        var positionTime = document.querySelector('.currentTime');
+        var videoDuration = document.querySelector('.totalTime');
 
     // Hide the default controls
     video.controls = false;
@@ -66,6 +42,22 @@
      if (!fullScreenEnabled) {
        fullscreen.style.display = 'none';
      }
+
+    //Play Video
+    function _playVideo(){        
+    lightbox.classList.add('show-lightbox');
+    videoPlayer.volume = 0.5;
+    volumeBar.value = 0.5;
+    videoPlayer.load();
+    videoPlayer.play();
+    };
+
+    function _closeLBox(){
+    lightbox.classList.remove('show-lightbox');
+    video.pause();
+    video.currentTime = 0;
+    video.load();
+    }
 
     //Play Pause Video
      function _playPause(e) {
@@ -208,7 +200,8 @@ String.prototype.toHHMMSS = function () {
 	return time;
 };
 
-
+    coverButton.addEventListener('click', _playVideo);
+    closeLightbox.addEventListener('click', _closeLBox);
     playpause.addEventListener('click', _playPause);
     video.addEventListener('click', _playPause);
     video.addEventListener('loadedmetadata', _videoDuration);
@@ -217,8 +210,7 @@ String.prototype.toHHMMSS = function () {
     fullscreen.addEventListener('click', _toggleFullScreen);
     volumeBar.addEventListener('change', _changeVolume);
     mute.addEventListener('click', _toggleMute);
-    // window.addEventListener('load', addElement)
-
+    
     // playpause.forEach(playpause => playpause.addEventListener('click', _playPause));
 
     };

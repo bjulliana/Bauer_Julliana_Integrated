@@ -400,6 +400,9 @@ video {
 	}
 }
 
+.videoArea {
+	position: relative;
+}
 /* --------------------------------------------
 OVERLAP SECTION
 ----------------------------------------------*/
@@ -926,21 +929,24 @@ VIDEO CONTROLS
 	z-index: 999;;
 	.close-lightbox {
 		position: absolute;
-		right: 12px;
-		top: 12px;
+		right: 21%;
+		top: 25%;
 		font-family: arial, helvetica, sans-serif;
 		font-size: 2em;
 		font-weight: bold;
 		color: white;
 		cursor: pointer;
+		background-color:$lightBlue;
+		border-radius: 30px;
+		padding: 0 1rem;
 	}
 }
 
 .show-lightbox { display: block; }
 
 #cover_video video {
-	width: 60%;
-	margin-top: 10%;
+	width: 55%;
+	margin-top: 15%;
 }
 
 .videoContainer {
