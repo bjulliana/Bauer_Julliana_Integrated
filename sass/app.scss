@@ -4,9 +4,6 @@
 HELPERS
 ----------------------------------------------*/
 
-.hidden {
-	display: none;
-}
 .p0 {
 	padding: 0;
 }
@@ -97,7 +94,7 @@ h4 {
 	font-style: normal;
 	font-weight: 300;
 	color: $black;
-	font-size: 1.4rem;
+	font-size: 1.125rem;
 	em:after {
 		height: 0.4rem;
 		bottom: 0.3rem;
@@ -185,15 +182,11 @@ section {
 	padding: 1em;
 }
 .sectionTitle {
-	margin-top: 5rem;
+	padding: 2rem 0;
 }
-.show-for-small-only {
-	.sectionTitle {
-		margin-top: 2rem;
-	}
-	.cell {
-		padding: 2rem;
-	}
+
+.dark-bg {
+	background-color: $lightBlue;
 }
 /* --------------------------------------------
 HEADER SECTION
@@ -359,7 +352,6 @@ header {
 	}
 }
 
-
 /* --------------------------------------------
 VIDEO COVER
 ----------------------------------------------*/
@@ -380,22 +372,7 @@ video {
 }
 .button {
   @include transition(all 0.3s ease);
-	font-family: $titleFont;
-	font-size: 0.8rem;
-	color: $lightBlue;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: 0.05em;
-	display: inline-block;
-	padding: 0.763em 2.5em 0.7em;
-	cursor: pointer;
 	position: relative;
-	text-decoration: none !important;
-	text-transform: uppercase;
-	text-align: center;
-	outline: none;
-	border-radius: 0;
-  background: none;
 	&.play {
 		width: 4.5rem;
 		height: 4.5rem;
@@ -426,6 +403,9 @@ video {
 /* --------------------------------------------
 OVERLAP SECTION
 ----------------------------------------------*/
+.overlap-content {
+	padding-top: 1rem;
+}
 
 .overlap {
 	max-width: 90%;
@@ -435,7 +415,7 @@ OVERLAP SECTION
 	box-shadow: 0 0 20px 2px $transparentBlack;
 	z-index: 1;
   border-radius: 4px;
-  @include pos(relative, -60px);
+  @include pos(relative, -3rem);
 }
 .overlap-section {
 	background-color: $lightGray;
@@ -574,13 +554,18 @@ GALLERY
 .reveal-overlay {
   background-color: rgba(10,10,10,.85);
   .reveal {
-    margin-top: 10%;
-    overflow-y: visible;
+    margin-top: 35%;
+	overflow-y: visible;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	width: 80%;
+	margin-left: auto;
   }
   .close-button {
     padding: .5rem;
-    line-height: 2.3rem;
-    font-size: 4rem;
+    line-height: 1.5rem;
+    font-size: 2rem;
     color: $white;
     background-color: $darkBlue;
     border-radius: 2rem;
@@ -589,49 +574,20 @@ GALLERY
   }
 }
 
-
 /* --------------------------------------------
 VIDEOS SECTION
 ----------------------------------------------*/
 
-.split-section {
-	&.offset-image {
-		padding: 3em;
-	}
-	&.onset-image {
-		padding: 3em;
-	}
-	h3 {
-		font-size: 1.5em !important;
-	}
-	.second-row {
-		margin-top: 3em;
-	}
-	.columns.v-middle {
-		display: table-cell;
-		width: 50%;
-		height: 100%;
-		padding-top: 6.0rem;
-		padding-bottom: 6.0rem;
-		float: none !important;
-		position: relative;
-		z-index: 1;
-	}
-}
-.overlay-color::before {
-  @include pos(absolute, 0, null, null, 0);
-	content: '';
-	background: $black;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
+.video-section {
+	background-image: url('../img/bg-back.png');
+	padding: 3em 0;
 }
 
 .video-placeholder {
 	position: relative;
 	overflow: hidden;
 	width: 90%;
-	margin: auto;
+	margin: 0 auto;
 	border-radius: 0.5rem;
 	box-shadow: 0 0 9.5rem 0 $shadow;
 	img {
@@ -646,20 +602,6 @@ VIDEOS SECTION
 		margin-right: auto !important;
 		border: none !important;
 	}
-}
-.videobgImg {
-	z-index: -100;
-}
-.video-img {
-  @include pos(fixed, 0, null, null, 0);
-	width: 100%;
-}
-.play:hover {
-	background: $darkBlue;
-	border: none;
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-	cursor: pointer;
 }
 
 /* --------------------------------------------
@@ -684,31 +626,25 @@ input::placeholder {
 .form {
 	margin-bottom: 4.0em;
 }
-button {
+.button.submit {
+  @include transition(all 0.3s ease);
 	font-family: $titleFont;
 	font-size: 1rem;
 	color: $lightBlue;
 	font-weight: 500;
-	line-height: 1.7;
 	letter-spacing: 0.05em;
-	display: inline-block;
-	padding: 0.79rem 3rem;
-	cursor: pointer;
-	position: relative;
-	text-decoration: none !important;
 	text-transform: uppercase;
 	text-align: center;
-	outline: none;
-	border-radius: 0;
-  background: none;
+	height: 73%;
 	&.filled {
 		color: $white;
-    background: $lightBlue;
-  }
-    &:hover {
-			background: $darkBlue !important;
+		background: $lightBlue;
 	}
-}
+	&:hover {
+		background: $darkBlue !important;
+	}
+}	  
+
 
 /* --------------------------------------------
 FOOTER
@@ -866,70 +802,368 @@ BACK TO TOP
 	}
 }
 
-// /* --------------------------------------------
-// ANIMATIONS
-// ----------------------------------------------*/
+/* --------------------------------------------
+ANNIVERSARY SECTION
+----------------------------------------------*/
 
-// @keyframes fade-in {
-//     from {opacity: 0; transform: scale(.7,.7)}
-//     to {opacity: 1;}
-// }
-// .fade-in {
-//   animation: fade-in 0.5s;
-// }
-  
-  
-//   @media only screen and (min-width: 768px) {
-// 	.cd-top {
-// 	  right: 20px;
-// 	  bottom: 20px;
-// 	}
-//   }
-//   @media only screen and (min-width: 1024px) {
-// 	.cd-top {
-// 	  height: 60px;
-// 	  width: 60px;
-// 	  right: 30px;
-// 	  bottom: 30px;
-// 	}
-//   }
-
-
-
-
-// blockquote {
-// 	border: none;
-// 	p {
-// 		font-family: $titleFont;
-// 		font-style: normal;
-// 		font-weight: 300;
-// 		font-size: 1.5em;
-// 		border: none;
-// 	}
-// }
-// .fa-quote-left {
-// 	font-size: 3em;
-// 	opacity: .3;
-// 	position: absolute;
-// 	margin-top: -15px;
-// 	&.first {
-// 		left: 10%;
-// 	}
-// }
-// .quotesArea {
-// 	padding: 20px;
-// }
-
-// .caption p.icon-links a:hover {
-// 	color: $white;
-// 	background: $lightBlue;
-// }
-// .backtotop:hover {
-// 	background: $lightBlue;
-// }
-
-.reveal-from-bottom {
-  transform: translateY(0);
-  opacity: 1;
-  @include tTransform(0.4s ease 0.5s, opacity 0.4s ease 0.5s);
+#anniversary .sectionTitle {
+	margin-bottom: 1.5rem;
 }
+
+section#anniversary {
+	padding-bottom: 0em !important;
+}
+
+.box-image {
+	display: flex;
+  	max-width: 100%;
+  	user-select: none;
+}
+
+.imageBoxContainer {
+	position: relative;
+	max-width: 1152px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.hotspots {
+  @include pos(absolute, 0, 0, 0, 0);
+  overflow: hidden;
+  .hotspot {
+	@include pos(absolute, 0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    &:nth-child( 1 ) .trigger {
+      top: 20%;
+      left: 8%;
+	}
+    &:nth-child( 2 ) .trigger {
+      top: 66%;
+      left: 92%;
+	}
+    &:nth-child( 3 ) .trigger {
+      top: 80%;
+      left: 43%;
+	}
+    .trigger {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      background: $white;
+      color: $darkBlue;
+      border-radius: 50%;
+      transform: translate( -50%, -50% );
+      cursor: pointer;
+      pointer-events: all;
+      box-shadow: 0 0 0 0 $black;
+      transition: box-shadow .4s;
+	  user-select: none;
+	  z-index: 2;
+      &:hover {
+		box-shadow: 0 0 0 8px rgba($white, .5 );
+		}
+	  i {
+		z-index: 2;
+	  }
+	}
+  }
+}
+
+.reveal {
+	figure {
+	background-color: $white;
+	}
+	figcaption {
+		@include pos(absolute, null, null, 0, 0);
+		width: 100%;
+		padding: 16px;
+		background: $lightBlue;
+		color: white;
+	}
+}
+
+.callaction {
+	padding: 1rem;
+	h3 {
+		font-size: 1.4rem;
+	}
+}
+
+/* --------------------------------------------
+TEMPORARY FIX FOR REVEAL BUG
+----------------------------------------------*/
+
+.is-reveal-open body,
+body.is-reveal-open {
+	overflow: inherit !important;
+}
+
+
+/* --------------------------------------------
+VIDEO CONTROLS
+----------------------------------------------*/
+.videoContainer:hover #controls {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+
+.lightbox {
+	display: none;
+	position: absolute; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	text-align: center;
+	background-color: rgba(0,0,0,0.95);
+	z-index: 999;;
+	.close-lightbox {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		font-family: arial, helvetica, sans-serif;
+		font-size: 2em;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+.show-lightbox { display: block; }
+
+#cover_video video {
+	width: 60%;
+	margin-top: 10%;
+}
+
+.videoContainer {
+	position: relative;
+	box-sizing: content-box;
+	display: inline;
+	&:-webkit-full-screen {
+		width: 100%;
+		height: auto;
+		background-color: #000;
+		display: block;
+	}
+}
+
+
+#controls {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #000;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 9999;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+    transform: translate(0, 100%);
+	.playPause, .volume .icon,.scale .icon {
+		width: 15px !important;
+		height: 15px !important;
+	}
+	.playButton {
+		display: flex;
+		width: 70px;
+		height: 100%;
+		color: #fff;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all .4s;
+		padding: 0;
+		text-align: center;
+		&:hover{
+			background-color: $lightBlue;
+		}
+	}
+	.ProgressContainer {
+		color: #fff;
+		width: calc(100% - 100px);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+	.progressBar {
+		float: left;
+		position: relative;
+		width: 100%;
+		height: 10px;
+		margin: 10px 9px;
+		background: rgba(255,255,255,.5);
+		cursor: pointer;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.progress {
+		background-color: #fff;
+		width: 0%;
+		height: 100%;
+		border-radius: 20px;
+	}
+	.timer {
+		margin: 0 10px;
+		font-family: Arial, sans-serif;
+		font-weight: 300;
+		font-size: 12px;
+		font-weight: 300;
+		color: #fff;
+		letter-spacing: 1px;
+	}
+	.volumeContainer {
+		width: 150px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		color: #fff;
+		padding: 0 10px;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+	.muteButton {
+		cursor: pointer;
+	}
+	.scale {
+		width: 70px;
+		height: 100%;
+		color:#fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all .4s;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+}
+
+video {
+	&::-webkit-media-controls {
+		display:none !important;
+	}
+	&::-webkit-media-controls-enclosure {
+		display:none !important;
+	}
+}
+
+/* Volume Input Style */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 0px 0;
+	background: transparent;
+	border-radius: 10px;
+	border: 0;
+	padding: 0 0 0 1rem;
+  	&:focus {
+		outline: none;
+  	}
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+		border: 0px solid rgba(0, 0, 0, 0);
+	}
+	&::-webkit-slider-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		height: 10px;
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: 0px;
+	}
+  	&:focus{
+	  	&::-webkit-slider-runnable-track {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+	&::-moz-range-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+		border: 0px solid rgba(0, 0, 0, 0);
+	}
+	&::-moz-range-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		height: 10px;
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+	}
+	&::-ms-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+	&::-ms-fill-lower {
+		background: rgba(219, 219, 219, 0.5);
+		border: 0px solid rgba(0, 0, 0, 0);
+		border-radius: 20px;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+	&::-ms-fill-upper {
+		background: rgba(255, 255, 255, 0.5);
+		border: 0px solid rgba(0, 0, 0, 0);
+		border-radius: 20px;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+	&::-ms-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+		height: 10px;
+	}
+	&:focus {
+		&::-ms-fill-lower {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+  &:focus {
+		&::-ms-fill-upper {
+		background: rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+  
+
+
+
