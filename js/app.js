@@ -1,7 +1,6 @@
 (() => {
 $(document).foundation()
 
-
 //Mobile Menu Icon Toggle
 document.querySelector('.mobile-icon').addEventListener('click', function() {
   mobileIcon = document.querySelector('.mobile-icon');
@@ -39,5 +38,21 @@ window.addEventListener('scroll', function(){
   }
 });
 
+//Play Video
+let   coverButton = document.querySelector('.cover_button'),
+      video = document.querySelector('video'),
+      lightbox = document.querySelector('.lightbox'),
+      volumeBar = document.querySelector('.volume-bar'),
+      closeLightbox = document.querySelector('.close-lightbox');
+
+      function playVideo(){        
+        lightbox.classList.add('show-lightbox');
+        video.volume = 0.5;
+        volumeBar.value = 0.5;
+        video.load();
+        video.play();
+      };
+
+coverButton.addEventListener('click', playVideo);
 
 })();

@@ -7,17 +7,13 @@
     <title>Starship Troopers 20th Anniversary Edition</title>
 
     <!-- CSS -->
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/foundation.css">
     <link rel="stylesheet" href="stylesheets/foundation.min.css">
     <link rel="stylesheet" href="stylesheets/app.css">
     <link rel="stylesheet" href="stylesheets/mediaQueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
-
     <!-- END CSS -->
 
     <!-- FONTS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Aldrich%7CBungee+Hairline%7CElectrolize%7CRajdhani%7CSarpanch" rel="stylesheet">
     <!-- END FONTS -->
 
@@ -29,6 +25,7 @@
 <body>
   <!-- MAIN CONTAINER -->
   <main class="main-container">
+    <h1 class="hide">Star Troopers 20th Anniversary Celebration Website</h1>
     <!-- HEADER -->
     <header class="grid-x grid-padding-x transparent-bg large">
       <div class="title-bar grid-x hide-for-large">
@@ -50,7 +47,8 @@
             </div>
           </div>
         </div>
-        <div class="top-bar-right cell small-7 medium-9">
+        <nav class="top-bar-right cell small-7 medium-9">
+          <h2 class="hide">Main Navigation for Large Screens</h2>
           <ul class="menu hover align-right" data-smooth-scroll>
             <li><a href="#about">The Movie</a></li>
             <li><a href="#cast">Cast</a></li>
@@ -58,47 +56,61 @@
             <li><a href="#videos">Videos</a></li>
             <li><a href="#gallery">Gallery</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-      <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+      <nav class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+        <h2 class="hide">Offscreen Navigation for Small and Medium Screen</h2>
         <ul class="menu hover vertical text-left">
           <li><a href="#about">About the Movie</a></li>
           <li><a href="#cast">Cast</a></li>
           <li><a href="#anniversary">20th Anniversary</a></li>
-          <li><a href="#video_section">Videos</a></li>
+          <li><a href="#videos">Videos</a></li>
           <li><a href="#gallery">Gallery</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
     <!-- END HEADER -->
 
     <!-- COVER -->
     <div class="off-canvas-content" data-off-canvas-content id="home">
       <section class="grid-x" id="video-background">
+      <h2 class="hide">Video Trailer Background</h2>
         <div class="cell">
           <div class="video-bg">
-            <video controls autoplay loop muted >
+            <video autoplay loop muted >
               <source src="videos/placeholder.mp4" type="video/mp4">
               <source src="videos/placeholder.webm" type="video/webm">
               <img src="img/bg-back.png" alt="Background">
             </video>
           </div>
         </div>
-        <div class="cell playButton">
+        <div class="cell">
           <div class="grid-x">
             <div class="large-12 cell text-center ">
-              <a href="#">
+              <a href="#" class="cover_button">
                 <span class="button filled play"></span>
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      <div class="lightbox grid-x">
+          <span class="close-lightbox">x</span>
+      <div class="videoContainer" id="cover_video">
+      <video class="videoCover" controls autoplay preload="metadata">
+          <source src="videos/placeholder.mp4" type="video/mp4">
+        </video>
+        <!-- Video Controls -->
+        <div id="controls"></div>
+      </div> <!-- END Video Reveal -->
+      </div>
       <!-- END COVER -->
 
       <!-- MAIN CONTENT -->
       <!-- ABOUT MOVIE -->
       <section id="about" class="bg-white p0">
+        <h2 class="hide">Overlap Background Section</h2>
         <div class="grid-x">
           <div class="overlap cell small-12 large-10 medium-10">
             <section class="overlap-content">
@@ -110,8 +122,8 @@
                 </div>
                 <div class=" medium-9 large-7 cell">
                   <div class="textContainer">
-                    <h3 class=""><em>About</em> the Movie</h3>
-                    <div class="">
+                    <h3><em>About</em> the Movie</h3>
+                    <div>
                       <p>Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as "the Bugs".</p>
                       <h4>Year</h4>
                       <p>1997</p>
@@ -215,7 +227,7 @@
           <div class="small-12 text-center sectionTitle">
             <h3><em>20th Anniversary</em> Special Edition Box</h3>
             <h4>We are Launching a comemorative box with special contents.</h4>
-            <h4>Click below to see what is included when your order!</h4>
+            <h4>Click below to see what is included!</h4>
           </div>
           <div class="cell shrink imageBoxContainer">
             <img class="box-image" srcset="img/SpecialEdition.png 900w,
@@ -295,63 +307,18 @@
       </div>
       <!-- END ANNIVERSARY SECTION -->
 
-      <!-- VIDEO SECTION FOR SMALL DEVICES-->
-      <section class="show-for-small-only light-bg" id="video_section">
-        <div class="grid-x text-center">
-          <div class="small-12 cell">
-            <h3 class="sectionTitle"><em>Videos</em></h3>
-            <h4>Teaser</h4>
-            <div class="video-placeholder video-box reveal-from-right">
-              <a href="#"> 
-                <img src="img/video_bg.jpg" alt="">
-                  <span class="button filled play"></span>
-              </a>
-            </div>
-          </div>
-          <div class="small-12 cell">
-            <h4>Trailer</h4>
-            <div class="video-placeholder video-box reveal-from-right">
-              <a href="#"> <img src="img/video_bg.jpg" alt=""> <span class="button filled play"></span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END VIDEO SECTION FOR SMALL DEVICES-->
-
       <!-- VIDEO SECTION FOR LARGE DEVICES -->
-      <section class="split-section onset-image medium-height hide-for-small-only" id="videos" data-overlay="6">
-        <div class="grid-container grid-y grid-margin-y">
-          <div class="large-6 medium-6 small-6 cell">
-            <div class="grid-x grid-margin-x align-middle">
-              <div class="large-6 medium-6 small-12 cell text-left prel">
-                <h3 class="text-white"><b>Starship</b> Troopers<br>20th Anniversary <em>Teaser</em></h3>
+      <section class="video-section" id="videos" data-overlay="6">
+            <div class="grid-x grid-margin-x align-center-middle grid-container">
+              <div class="large-6 medium-12 small-12 cell text-center prel shrink">
+                <h3 class="text-white"><b>Starship</b> Troopers<br>20th Anniversary <em>Trailer</em></h3>
               </div>
-              <div class="large-6 medium-6 small-12 cell">
-                <div class="video-placeholder video-box float-left">
+              <div class="large-6 medium-12 small-12 cell">
+                <div class="video-placeholder video-box">
                   <a href="#"> <img src="img/video_bg.jpg" alt=""> <span class="button filled play"></span> </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="second-row large-6 medium-6 small-6 cell">
-            <div class="grid-x grid-margin-x align-middle">
-              <div class="large-6 medium-6 small-12 cell text-left">
-                <div class="video-placeholder video-box float-left">
-                  <a href="#">
-                    <img src="img/video_bg.jpg" alt="">
-                    <span class="button filled play"></span>
-                  </a>
-                </div>
-              </div>
-              <div class="large-6 medium-6 small-12 cell text-left prel">
-                <h3 class="text-white"><b>Starship</b> Troopers<br>20th Anniversary <em>Trailer</em></h3>
-              </div>
-            </div>
-          </div>
-          <div class="videobgImg">
-            <img class="video-img" src="img/bg-back.png" alt="">
-          </div>
-        </div>
       </section>
       <!-- END VIDEO SECTION FOR LARGE DEVICES-->
 
@@ -364,6 +331,7 @@
         </div>
       </section>
       <section class="galleryArea bg-white">
+        <h3 class="hide">Image Gallery Container</h3>
         <!-- Gallery Container -->
         <div class="galleryContainer grid-x">
           <!-- Image 1 -->
@@ -739,11 +707,13 @@
 
   <!-- SCRIPTS -->
   <script src="js/vendor/jquery.js"></script>
+  <script src="js/video.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.js"></script>
   <script src="js/app.js"></script>
-  <!-- <script src="js/vendor/foundation.core.js"></script> -->
   <script src="js/vendor/foundation.smoothScroll.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
   <!-- END SCRIPTS -->
 
 </body>

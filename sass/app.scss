@@ -4,9 +4,6 @@
 HELPERS
 ----------------------------------------------*/
 
-.hidden {
-	display: none;
-}
 .p0 {
 	padding: 0;
 }
@@ -418,7 +415,7 @@ OVERLAP SECTION
 	box-shadow: 0 0 20px 2px $transparentBlack;
 	z-index: 1;
   border-radius: 4px;
-  @include pos(relative, -60px);
+  @include pos(relative, -3rem);
 }
 .overlap-section {
 	background-color: $lightGray;
@@ -581,45 +578,16 @@ GALLERY
 VIDEOS SECTION
 ----------------------------------------------*/
 
-.split-section {
-	// background-image: url('../img/bg-back.png');
-	&.offset-image {
-		padding: 3em;
-	}
-	&.onset-image {
-		padding: 3em;
-	}
-	h3 {
-		font-size: 1.5em !important;
-	}
-	.second-row {
-		margin-top: 3em;
-	}
-	.columns.v-middle {
-		display: table-cell;
-		width: 50%;
-		height: 100%;
-		padding-top: 6.0rem;
-		padding-bottom: 6.0rem;
-		float: none !important;
-		position: relative;
-		z-index: 1;
-	}
-}
-.overlay-color::before {
-  @include pos(absolute, 0, null, null, 0);
-	content: '';
-	background: $black;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
+.video-section {
+	background-image: url('../img/bg-back.png');
+	padding: 3em 0;
 }
 
 .video-placeholder {
 	position: relative;
 	overflow: hidden;
 	width: 90%;
-	margin: auto;
+	margin: 0 auto;
 	border-radius: 0.5rem;
 	box-shadow: 0 0 9.5rem 0 $shadow;
 	img {
@@ -635,25 +603,7 @@ VIDEOS SECTION
 		border: none !important;
 	}
 }
-.videobgImg {
-	z-index: -100;
-}
-.video-img {
-  @include pos(fixed, 0, null, null, 0);
-	width: 100%;
-	height: 100%;
-}
-.play:hover {
-	background: $darkBlue;
-	border: none;
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-	cursor: pointer;
-}
 
-#video_section .cell {
-	padding-bottom: 1.5rem;
-}
 /* --------------------------------------------
 CONTACT SECTION
 ----------------------------------------------*/
@@ -939,14 +889,281 @@ section#anniversary {
 	}
 }
 
-.is-reveal-open body,
-body.is-reveal-open {
-	overflow: inherit !important;
-}
-
 .callaction {
 	padding: 1rem;
 	h3 {
 		font-size: 1.4rem;
 	}
 }
+
+/* --------------------------------------------
+TEMPORARY FIX FOR REVEAL BUG
+----------------------------------------------*/
+
+.is-reveal-open body,
+body.is-reveal-open {
+	overflow: inherit !important;
+}
+
+
+/* --------------------------------------------
+VIDEO CONTROLS
+----------------------------------------------*/
+.videoContainer:hover #controls {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+
+.lightbox {
+	display: none;
+	position: absolute; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	text-align: center;
+	background-color: rgba(0,0,0,0.95);
+	z-index: 999;;
+	.close-lightbox {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		font-family: arial, helvetica, sans-serif;
+		font-size: 2em;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+.show-lightbox { display: block; }
+
+#cover_video video {
+	width: 60%;
+	margin-top: 10%;
+}
+
+.videoContainer {
+	position: relative;
+	box-sizing: content-box;
+	display: inline;
+	&:-webkit-full-screen {
+		width: 100%;
+		height: auto;
+		background-color: #000;
+		display: block;
+	}
+}
+
+
+#controls {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #000;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 9999;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+    transform: translate(0, 100%);
+	.playPause, .volume .icon,.scale .icon {
+		width: 15px !important;
+		height: 15px !important;
+	}
+	.playButton {
+		display: flex;
+		width: 70px;
+		height: 100%;
+		color: #fff;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all .4s;
+		padding: 0;
+		text-align: center;
+		&:hover{
+			background-color: $lightBlue;
+		}
+	}
+	.ProgressContainer {
+		color: #fff;
+		width: calc(100% - 100px);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+	.progressBar {
+		float: left;
+		position: relative;
+		width: 100%;
+		height: 10px;
+		margin: 10px 9px;
+		background: rgba(255,255,255,.5);
+		cursor: pointer;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.progress {
+		background-color: #fff;
+		width: 0%;
+		height: 100%;
+		border-radius: 20px;
+	}
+	.timer {
+		margin: 0 10px;
+		font-family: Arial, sans-serif;
+		font-weight: 300;
+		font-size: 12px;
+		font-weight: 300;
+		color: #fff;
+		letter-spacing: 1px;
+	}
+	.volumeContainer {
+		width: 150px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		color: #fff;
+		padding: 0 10px;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+	.muteButton {
+		cursor: pointer;
+	}
+	.scale {
+		width: 70px;
+		height: 100%;
+		color:#fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all .4s;
+		&:hover {
+			background-color: $lightBlue;
+		}
+	}
+}
+
+video {
+	&::-webkit-media-controls {
+		display:none !important;
+	}
+	&::-webkit-media-controls-enclosure {
+		display:none !important;
+	}
+}
+
+/* Volume Input Style */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 0px 0;
+	background: transparent;
+	border-radius: 10px;
+	border: 0;
+	padding: 0 0 0 1rem;
+  	&:focus {
+		outline: none;
+  	}
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+		border: 0px solid rgba(0, 0, 0, 0);
+	}
+	&::-webkit-slider-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		height: 10px;
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: 0px;
+	}
+  	&:focus{
+	  	&::-webkit-slider-runnable-track {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+	&::-moz-range-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+		border: 0px solid rgba(0, 0, 0, 0);
+	}
+	&::-moz-range-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		height: 10px;
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+	}
+	&::-ms-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+	&::-ms-fill-lower {
+		background: rgba(219, 219, 219, 0.5);
+		border: 0px solid rgba(0, 0, 0, 0);
+		border-radius: 20px;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+	&::-ms-fill-upper {
+		background: rgba(255, 255, 255, 0.5);
+		border: 0px solid rgba(0, 0, 0, 0);
+		border-radius: 20px;
+		box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+	&::-ms-thumb {
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+		border: 0px solid rgba(0, 0, 0, 0);
+		width: 20px;
+		border-radius: 20px;
+		background: #ffffff;
+		cursor: pointer;
+		height: 10px;
+	}
+	&:focus {
+		&::-ms-fill-lower {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+  &:focus {
+		&::-ms-fill-upper {
+		background: rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+  
+
+
+
