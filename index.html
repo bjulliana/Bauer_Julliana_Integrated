@@ -37,24 +37,45 @@
           </button>
         </div>
       </div>
-      <div class="top-bar grid-x" id="mainMenu">
-        <div class="top-bar-left cell small-5 medium-3">
-          <div class="menu logoArea align-left">
-            <div>
-              <a href="#home">
-                <img class="logo" src="img/logo.png" width="40" alt="Logo">
+      <div class="grid-x" id="mainMenu">
+        <nav class="lateralMenu">
+          <h2 class="hide">Main Navigation</h2>
+          <ul id="qmenu" data-smooth-scroll>
+            <li>
+              <a href="#home"><i class="fas fa-home"></i>
               </a>
-            </div>
-          </div>
-        </div>
-        <nav class="top-bar-right cell small-7 medium-9">
-          <h2 class="hide">Main Navigation for Large Screens</h2>
-          <ul class="menu hover align-right" data-smooth-scroll>
-            <li><a href="#about">The Movie</a></li>
-            <li><a href="#cast">Cast</a></li>
-            <li><a href="#anniversary">20th Anniversary</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+              <span class="title">Home</span>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-info-circle"></i>
+              </a>
+              <span class="title">The Movie</span>
+            </li>
+            <li>
+              <a href="#cast"><i class="fas fa-user-circle"></i>
+              </a>
+              <span class="title">The Cast</span>
+            </li>
+            <li>
+              <a href="#anniversary"><i class="fas fa-star"></i>
+              </a>
+              <span class="title">Anniversary Edition</span>
+            </li>
+            <li>
+              <a href="#videos"><i class="fas fa-film"></i>
+              </a>
+              <span class="title">Trailer</span>
+            </li>
+            <li>
+              <a href="#gallery"><i class="fas fa-image"></i>
+              </a>
+              <span class="title">Gallery</span>
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i>
+              </a>
+              <span class="title">Subscribe</span>
+            </li>
           </ul>
         </nav>
       </div>
@@ -75,7 +96,7 @@
     <div class="off-canvas-content" data-off-canvas-content id="home">
       <section class="grid-x" id="video-background">
       <h2 class="hide">Video Trailer Background</h2>
-        <div class="cell">
+        <!-- <div class="cell"> -->
           <div class="video-bg">
             <video autoplay loop muted >
               <source src="videos/placeholder.mp4" type="video/mp4">
@@ -83,78 +104,79 @@
               <img src="img/bg-back.png" alt="Background">
             </video>
           </div>
-        </div>
+        <!-- </div> -->
         <div class="cell">
           <div class="grid-x">
-            <div class="large-12 cell text-center ">
+              <div class="large-12 cell text-center">
+              <a href="#home">
+                  <img class="homeLogo" src="img/logo.png" width="40" alt="Logo">
+                </a>
+                </div>
+            <div class="large-12 cell text-center">
               <a href="#" class="cover_button">
                 <span class="button filled play"></span>
               </a>
             </div>
+            <div class="large-12 cell text-center">
+                <a href="#about" data-smooth-scroll class="scroll-button scroll-button viewport-height-content text-white">Would you Like to Know More?<span class="icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </a>
+              </div>
           </div>
         </div>
       </section>
 
       <div class="lightbox grid-x">
-          <span class="close-lightbox">x</span>
+        <div class="videoArea">
       <div class="videoContainer" id="cover_video">
       <video class="videoCover" controls autoplay preload="metadata">
           <source src="videos/placeholder.mp4" type="video/mp4">
         </video>
         <!-- Video Controls -->
         <div id="controls"></div>
-      </div> <!-- END Video Reveal -->
       </div>
+      <span class="close-lightbox">CLOSE</span>
+      </div>
+    </div>
       <!-- END COVER -->
 
       <!-- MAIN CONTENT -->
       <!-- ABOUT MOVIE -->
-      <section id="about" class="bg-white p0">
-        <h2 class="hide">Overlap Background Section</h2>
-        <div class="grid-x">
-          <div class="overlap cell small-12 large-10 medium-10">
-            <section class="overlap-content">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-3 large-3 large-offset-1 cell">
-                  <div class="imageContainer cell-spacing-mb30 float-center">
-                    <img src="img/poster.jpg" alt="Starship Troopers Movie Poster">
-                  </div>
-                </div>
-                <div class=" medium-9 large-7 cell">
-                  <div class="textContainer">
-                    <h3><em>About</em> the Movie</h3>
-                    <div>
-                      <p>Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as "the Bugs".</p>
-                      <h4>Year</h4>
-                      <p>1997</p>
-                      <h4>Runtime</h4>
-                      <p>129 minutes</p>
-                      <h4>Studio</h4>
-                      <p>Sony Pictures Home Entertainment</p>
-                      <h4>Genre</h4>
-                      <p>Action, Adventure, Sci-Fi</p>
-                      <h4>Directed by</h4>
-                      <p>Paul Verhoeven</p>
-                      <h4>Screenplay by</h4>
-                      <p>Edward Neumeier</p>
-                      <h4>Based upon the novel</h4>
-                      <p>"Starship Soldier" by Robert A. Heinlein</p>
-                      <h4>Produced by</h4>
-                      <p>Jon Davison, Frances Doel, Stacy Lumbrezer, Alan Marshall, Edward Neumeier &amp; Phil Tippett</p>
-                      <h4>Cast</h4>
-                      <p>Casper Van Dien, Dina Meyer, Denise Richards, Neil Patrick Harris, Jake Busey, Clancy Brown, Seth Gilliam, Patrick Muldoon &amp; PMichael Ironside</p>
-                    </div>
-                  </div>
+      <section id="about" class="bg-white light">
+        <h2 class="hide">About the Movie</h2>
+          <div class="grid-x grid-container grid-padding-x">
+            <div class="medium-3 large-3 large-offset-1 cell">
+              <div class="imageContainer cell-spacing-mb30 float-center">
+                <img src="img/poster.jpg" alt="Starship Troopers Movie Poster">
+              </div>
+            </div>
+            <div class=" medium-9 large-offset-1 large-7 cell">
+              <div class="textContainer">
+                <h3><em>About</em> the Movie</h3>
+                <div>
+                  <p>Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as "the Bugs".</p>
+                  <h4>Year</h4>
+                  <p>1997</p>
+                  <h4>Runtime</h4>
+                  <p>129 minutes</p>
+                  <h4>Studio</h4>
+                  <p>Sony Pictures Home Entertainment</p>
+                  <h4>Genre</h4>
+                  <p>Action, Adventure, Sci-Fi</p>
+                  <h4>Directed by</h4>
+                  <p>Paul Verhoeven</p>
+                  <h4>Produced by</h4>
+                  <p>Jon Davison, Frances Doel, Stacy Lumbrezer, Alan Marshall, Edward Neumeier &amp; Phil Tippett</p>
+                  <h4>Cast</h4>
+                  <p>Casper Van Dien, Dina Meyer, Denise Richards, Neil Patrick Harris, Jake Busey, Clancy Brown, Seth Gilliam, Patrick Muldoon &amp; PMichael Ironside</p>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
-        </div>
       </section>
       <!-- END ABOUT MOVIE -->
               
       <!-- CAST -->
-      <section class="p0 grid-x" data-overlay="0" id="cast">
+      <section class="p0 grid-x dark" data-overlay="0" id="cast">
         <!-- Casper Van Dien BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
           <div class="cast-container-inner" data-overlay="4">
@@ -218,11 +240,71 @@
           </div>
         </div>
         <!-- END BLOCK -->
+        <!-- Jake Busey BLOCK -->
+        <div class="large-3 medium-6 cell cast-container">
+          <div class="cast-container-inner" data-overlay="4"> <img src="img/jake_square.png"  alt="Jake Busey">
+            <div class="cast-link cell">
+              <a class="cell" href="http://www.imdb.com/name/nm0000998/?ref_=tt_cl_t4" target="_blank">
+                <h5>More Info</h5>
+              </a>
+            </div>
+          </div>
+          <div class="vertical-caption">
+            <h5>Jake Busey</h5>
+            <p>as Ace Levy</p>
+          </div>
+        </div>
+        <!-- END BLOCK -->
+        <!-- Patrick Muldoon BLOCK -->
+        <div class="large-3 medium-6 cell cast-container">
+          <div class="cast-container-inner" data-overlay="4"> <img src="img/patrick_square.png"  alt="Patrick Muldoon">
+            <div class="cast-link cell">
+              <a class="cell" href="http://www.imdb.com/name/nm0005258/?ref_=tt_cl_t8" target="_blank">
+                <h5>More Info</h5>
+              </a>
+            </div>
+          </div>
+          <div class="vertical-caption">
+            <h5>Patrick Muldoon</h5>
+            <p>as Zander Barcalow</p>
+          </div>
+        </div>
+        <!-- END BLOCK -->
+        <!-- Michael Ironside BLOCK -->
+        <div class="large-3 medium-6 cell cast-container">
+          <div class="cast-container-inner" data-overlay="4"> <img src="img/michael_square.png"  alt="Michael Ironside">
+            <div class="cast-link cell">
+              <a class="cell" href="http://www.imdb.com/name/nm0000461/?ref_=tt_cl_t9" target="_blank">
+                <h5>More Info</h5>
+              </a>
+            </div>
+          </div>
+          <div class="vertical-caption">
+            <h5>Michael Ironside</h5>
+            <p>as Jean Rasczak</p>
+          </div>
+        </div>
+        <!-- END BLOCK -->
+        <!-- Clancy Brown BLOCK -->
+        <div class="large-3 medium-6 cell cast-container">
+          <div class="cast-container-inner" data-overlay="4"> <img src="img/clancy_square.png"  alt="Clancy Brown">
+            <div class="cast-link cell">
+              <a class="cell" href="http://www.imdb.com/name/nm0000317/?ref_=tt_cl_t6" target="_blank">
+                <h5>More Info</h5>
+              </a>
+            </div>
+          </div>
+          <div class="vertical-caption">
+            <h5>Clancy Brown</h5>
+            <p>as Sgt. Zim</p>
+          </div>
+        </div>
+        <!-- END BLOCK -->
       </section>
       <!-- END CAST -->
 
       <!-- ANNIVERSARY SECTION-->
-      <section class="bg-white" id="anniversary">
+      <section class="bg-white light" id="anniversary">
         <div class="grid-x align-center">
           <div class="small-12 text-center sectionTitle">
             <h3><em>20th Anniversary</em> Special Edition Box</h3>
@@ -254,7 +336,7 @@
                     <figcaption>Exclusive Starship Troopers 20th Anniversary Edition T-Shirt</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
               </div>
@@ -274,7 +356,7 @@
                     <figcaption>24" x 36" Exclusive Anniversary Celebration Poster</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
               </div>
@@ -294,7 +376,7 @@
                     <figcaption>Two Disc Blu-ray Edition with Extra Two Hours of Content, including Deleted Scenes, Behind the Scenes Footage, Audio Commentaries and much more!</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
               </div>
@@ -303,34 +385,34 @@
         </div>
       </section>
       <div class="cell dark-bg callaction">
-          <a href="#contact" data-smooth-scroll><h3 class="text-center text-white">Sign up to be the first to know about the release date!</h3></a>
+          <a href="#contact" data-smooth-scroll><h3 class="text-center">Sign up to receive news about the release date!</h3></a>
       </div>
       <!-- END ANNIVERSARY SECTION -->
 
-      <!-- VIDEO SECTION FOR LARGE DEVICES -->
-      <section class="video-section" id="videos" data-overlay="6">
-            <div class="grid-x grid-margin-x align-center-middle grid-container">
-              <div class="large-6 medium-12 small-12 cell text-center prel shrink">
-                <h3 class="text-white"><b>Starship</b> Troopers<br>20th Anniversary <em>Trailer</em></h3>
+      <!-- VIDEO SECTION -->
+      <section class="video-section dark" id="videos" data-overlay="6">
+            <div class="grid-x grid-margin-x grid-container align-center">
+              <div class="small-12 cell prel text-center">
+                <h3 class="text-white sectionTitle"><b>Starship</b> Troopers<br>20th Anniversary <em>Trailer</em></h3>
               </div>
-              <div class="large-6 medium-12 small-12 cell">
+              <div class="small-12 cell">
                 <div class="video-placeholder video-box">
                   <a href="#"> <img src="img/video_bg.jpg" alt=""> <span class="button filled play"></span> </a>
                 </div>
               </div>
             </div>
       </section>
-      <!-- END VIDEO SECTION FOR LARGE DEVICES-->
+      <!-- END VIDEO SECTION-->
 
       <!-- GALLERY SECTION -->
-      <section class="bg-white" id="gallery">
+      <section class="bg-white light" id="gallery">
         <div class="full grid-x">
           <div class="cell large-12 cell text-center sectionTitle">
             <h3>Image <em>Gallery</em></h3>
           </div>
         </div>
       </section>
-      <section class="galleryArea bg-white">
+      <section class="galleryArea dark">
         <h3 class="hide">Image Gallery Container</h3>
         <!-- Gallery Container -->
         <div class="galleryContainer grid-x">
@@ -348,7 +430,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image1" data-reveal>
             <img src="img/gallery/Image1-Large.png" alt="Troops in Training"/>
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 2 -->
@@ -365,7 +447,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image2" data-reveal>
             <img src="img/gallery/Image2-Large.png" alt="Soldiers on a Cave" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 3 -->
@@ -382,7 +464,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image3" data-reveal>
             <img src="img/gallery/Image3-Large.png" alt="Rico on Biology Class" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 4 -->
@@ -399,7 +481,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image4" data-reveal>
             <img src="img/gallery/Image4-Large.png" alt="Carmen at the Ship" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
             <!-- Image 5 -->
@@ -416,7 +498,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image5" data-reveal>
             <img src="img/gallery/Image5-Large.png" alt="Rico on Class" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 6 -->
@@ -433,7 +515,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image6" data-reveal>
             <img src="img/gallery/Image6-Large.png" alt="Carmen Smilling" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 7 -->
@@ -450,7 +532,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image7" data-reveal>
             <img src="img/gallery/Image7-Large.png" alt="Base at Bug Planet" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 8 -->
@@ -467,7 +549,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image8" data-reveal>
             <img src="img/gallery/Image8-Large.png" alt="Carmen Flying Ship" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 9 -->
@@ -484,7 +566,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image9" data-reveal>
             <img src="img/gallery/Image9-Large.png" alt="Rico Watching the News About Buenos Aires" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 10 -->
@@ -501,7 +583,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image10" data-reveal>
             <img src="img/gallery/Image10-Large.png" alt="Ships in Space" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 11 -->
@@ -518,7 +600,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image11" data-reveal>
             <img src="img/gallery/Image11-Large.png" alt="Rico, Carmen and Carl Shaking Hands" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 12 -->
@@ -535,7 +617,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image12" data-reveal>
             <img src="img/gallery/Image12-Large.png" alt="Solider Shooting at Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 13 -->
@@ -552,7 +634,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image13" data-reveal>
             <img src="img/gallery/Image13-Large.png" alt="Rico Running from Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 14 -->
@@ -569,7 +651,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image14" data-reveal>
             <img src="img/gallery/Image14-Large.png" alt="Bugs on Planet Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 15 -->
@@ -586,7 +668,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image15" data-reveal>
             <img src="img/gallery/Image15-Large.png" alt="Rico and Soldiers Listening to Instructions" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 16 -->
@@ -603,7 +685,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image16" data-reveal>
             <img src="img/gallery/Image16-Large.png" alt="Giant Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 17 -->
@@ -620,7 +702,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image17" data-reveal>
             <img src="img/gallery/Image17-Large.png" alt="Soldiers Looking Up" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 18 -->
@@ -637,7 +719,7 @@
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image18" data-reveal>
             <img src="img/gallery/Image18-Large.png" alt="Military Base on Planet Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
         </div>
@@ -650,7 +732,7 @@
             <h2 class="js-modal-author modal-author"></h2>
             <img class="js-modal-preview modal-preview" src="" alt="" />
             <button class="js-close-button close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">CLOSE</span>
             </button>
           </div><!-- end Gallery modal -->
         </div><!-- end Gallery overlay -->
@@ -658,7 +740,7 @@
       <!-- END SECTION -->
 
       <!-- SIGN UP SECTION -->
-      <section id="contact" class="light-bg contact">
+      <section id="contact" class="light-bg contact light">
         <div class="grid-x">
           <div class="large-10 cell form-section float-center">
             <div class="large-12 cell text-center sectionTitle">
