@@ -4,6 +4,7 @@
     var supportsVideo = !!document.createElement('video').canPlayType;
     if (supportsVideo) {
 
+        var body = document.querySelector('body');
         var videoContainer = document.querySelector('.videoContainer');
         var videoControls = document.querySelector('#controls');
         var video = document.querySelector('.videoCover');
@@ -46,6 +47,7 @@
     //Play Video
     function _playVideo(){        
     lightbox.classList.add('show-lightbox');
+    body.classList.add('noScroll');
     videoPlayer.volume = 0.5;
     volumeBar.value = 0.5;
     videoPlayer.load();
@@ -54,6 +56,7 @@
 
     function _closeLBox(){
     lightbox.classList.remove('show-lightbox');
+    body.classList.remove('noScroll');
     video.pause();
     video.currentTime = 0;
     video.load();
