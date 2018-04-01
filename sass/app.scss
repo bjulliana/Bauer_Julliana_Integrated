@@ -201,6 +201,30 @@ header {
 	color: $white;
 	background: none;
 	font-family: $titleFont;
+	&.menu {
+    @include transition(all 0.3s ease);
+	}
+}
+.top-bar {
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color: transparent !important;
+	ul {
+		background-color: transparent !important;
+	}
+	a {
+		color: $white;
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+	&.vertical {
+		background-color: $black;
+	}
+}
+
+.title-bar {
+	background: none;
+	padding: 1em;
 	&.small {
 		background: $white;
 		border-bottom: 1px solid $transparentBlack;
@@ -234,32 +258,10 @@ header {
 				background-color: transparent;
 			}
 		}
+		.logo {
+			opacity: 1;
+		}
 	}
-
-	&.menu {
-    @include transition(all 0.3s ease);
-	}
-}
-.top-bar {
-	padding-left: 2em;
-	padding-right: 2em;
-	background-color: transparent !important;
-	ul {
-		background-color: transparent !important;
-	}
-	a {
-		color: $white;
-		font-weight: 700;
-		font-size: 1.1rem;
-	}
-	&.vertical {
-		background-color: $black;
-	}
-}
-
-.title-bar {
-	background: none;
-	padding: 1em;
 }
 .menu {
 	&.vertical {
@@ -360,10 +362,6 @@ header {
 	}
 }
 
-header.small .logo {
-	opacity: 1;
-}
-
 /* --------------------------------------------
 LATERAL MENU
 ----------------------------------------------*/
@@ -456,6 +454,18 @@ LATERAL MENU
 	.lateralMenu a.active{
 		background-color: rgba(230, 230, 230, 0.12);
 	}
+
+.dark-menu {
+	.lateralMenu {
+		a {
+			background-color: rgba(0, 0, 0, 0.1);
+			color: $black;
+		}
+		.title {
+			color: $black;
+		}
+	}
+}
 /* --------------------------------------------
 VIDEO COVER
 ----------------------------------------------*/
