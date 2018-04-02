@@ -40,7 +40,7 @@
       <div class="grid-x" id="mainMenu">
         <nav class="lateralMenu">
           <h2 class="hide">Main Navigation</h2>
-          <ul id="qmenu" data-smooth-scroll>
+          <ul id="latMenu" data-smooth-scroll>
             <li>
               <a href="#home"><i class="fas fa-home"></i>
               </a>
@@ -312,13 +312,10 @@
             <h4>Click below to see what is included!</h4>
           </div>
           <div class="cell shrink imageBoxContainer">
-            <img class="box-image" srcset="img/SpecialEdition.png 900w,
-                  img/SpecialEdition@0,75x.png 675w,
-                  img/SpecialEdition@0,5x.png 450w"
-            sizes="(max-width: 23em) 330px,
-                  (max-width: 50em) 600px,
-                  (min-width: 64em) 900px"
-            src="img/SpecialEdition.png" alt="Special Anniversary Box Content"/>
+            
+            <img class="box-image" data-interchange="[img/SpecialEdition@0,5x.png, small]
+            [img/SpecialEdition@0,75x.png, medium],[img/SpecialEdition.png, large]"
+            alt="Special Anniversary Box Content"/>
             <div class="hotspots">
               <div class="hotspot">
                 <div class="trigger" data-open="shirt">
@@ -326,13 +323,7 @@
                 </div>
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="shirt" data-reveal>
                   <figure>
-                  <img srcset="img/FullShirt.png 800w,
-                      img/FullShirt@0,5x.png 400w,
-                      img/FullShirt@0,25x.png 200w"
-                sizes="(max-width: 23em) 200px,
-                      (max-width: 50em) 400px,
-                      (min-width: 64em) 40%"
-                src="img/FullShirt.png" alt="Exclusive Starship Troopers Shirt"/>
+                  <img data-interchange="[img/FullShirt@0,25x.png, small], [img/FullShirt@0,5x.png, medium],[img/FullShirt.png, large]" alt="Exclusive Starship Troopers Shirt"/>
                     <figcaption>Exclusive Starship Troopers 20th Anniversary Edition T-Shirt</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -346,13 +337,8 @@
                 </div>
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="poster" data-reveal>
                   <figure>
-                      <img srcset="img/poster.png 800w,
-                      img/poster@0,5x.png 400w,
-                      img/poster@0,25x.png 200w"
-                sizes="(max-width: 23em) 200px,
-                      (max-width: 50em) 400px,
-                      (min-width: 64em) 40%"
-                src="img/poster.png" alt="Exclusive Starship Troopers Poster"/>
+                      <img data-interchange="[img/poster@0,25x.png, small]
+                      [img/poster@0,5x.png, medium],[img/poster.png, large]" alt="Exclusive Starship Troopers Poster"/>
                     <figcaption>24" x 36" Exclusive Anniversary Celebration Poster</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -366,13 +352,8 @@
                 </div>
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="box" data-reveal>
                   <figure>
-                    <img srcset="img/box.png 800w,
-                    img/box@0,5x.png 400w,
-                    img/box@0,25x.png 200w"
-              sizes="(max-width: 23em) 200px,
-                    (max-width: 50em) 400px,
-                    (min-width: 64em) 40%"
-              src="img/box.png" alt="20th Anniversary Special DVD Box"/>
+                    <img data-interchange="[img/box@0,25x.png, small]
+                    [img/box@0,5x.png, medium],[img/box.png, large]" alt="20th Anniversary Special DVD Box"/>
                     <figcaption>Two Disc Blu-ray Edition with Extra Two Hours of Content, including Deleted Scenes, Behind the Scenes Footage, Audio Commentaries and much more!</figcaption>
                   </figure>
                   <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -412,23 +393,20 @@
           </div>
         </div>
       </section>
-      <section class="galleryArea dark">
+      <section class="galleryArea dark" id="gallery-area">
         <h3 class="hide">Image Gallery Container</h3>
         <!-- Gallery Container -->
         <div class="galleryContainer grid-x">
           <!-- Image 1 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image1">
-              <img srcset="img/gallery/Image1-Small.png 300w,
-                      img/gallery/Image1-Medium.png 600w"
-                      sizes="(max-width: 23em) 330px,
-                      (max-width: 50em) 600px,
-                      (min-width: 64em) 100%"
-                      src="img/gallery/Image1-Medium.png" alt="Troops in Training"/>
+            <img data-interchange="[img/Image1-Small.png, small]
+            [img/img/gallery/Image1-Medium.png, medium],[img/gallery/Image1-Medium.png, large]" alt="Troops in Training"/>
             </a>
           </div>
-          <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image1" data-reveal>
-            <img src="img/gallery/Image1-Large.png" alt="Troops in Training"/>
+          <div class="reveal medium" id="image1" data-reveal>
+            <img data-interchange="[img/Image1-Small.png, small]
+            [img/img/gallery/Image1-Medium.png, medium],[img/gallery/Image1-Large.png, large]" alt="Troops in Training"/>
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -436,16 +414,13 @@
           <!-- Image 2 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image2">
-              <img srcset="img/gallery/Image2-Small.png 300w,
-                    img/gallery/Image2-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image2-Medium.png" alt="Soldiers on a Cave"/>
+              <img data-interchange="[img/Image2-Small.png, small]
+              [img/img/gallery/Image2-Medium.png, medium],[img/gallery/Image2-Medium.png, large]" alt="Soldiers on a Cave"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image2" data-reveal>
-            <img src="img/gallery/Image2-Large.png" alt="Soldiers on a Cave" />
+            <img data-interchange="[img/Image2-Small.png, small]
+            [img/img/gallery/Image2-Medium.png, medium],[img/gallery/Image2-Large.png, large]" alt="Soldiers on a Cave" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -453,16 +428,13 @@
           <!-- Image 3 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image3">
-              <img srcset="img/gallery/Image3-Small.png 300w,
-                    img/gallery/Image3-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image2-Medium.png" alt="Rico on Biology Class"/>
+              <img data-interchange="[img/Image3-Small.png, small]
+              [img/img/gallery/Image3-Medium.png, medium],[img/gallery/Image3-Medium.png, large]" alt="Rico on Biology Class"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image3" data-reveal>
-            <img src="img/gallery/Image3-Large.png" alt="Rico on Biology Class" />
+            <img data-interchange="[img/Image3-Small.png, small]
+            [img/img/gallery/Image3-Medium.png, medium],[img/gallery/Image3-Large.png, large]" alt="Rico on Biology Class" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -470,16 +442,13 @@
           <!-- Image 4 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image3">
-              <img srcset="img/gallery/Image4-Small.png 300w,
-                    img/gallery/Image4-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image4-Medium.png" alt="Carmen at the Ship"/>
+              <img data-interchange="[img/Image4-Small.png, small]
+              [img/img/gallery/Image4-Medium.png, medium],[img/gallery/Image4-Medium.png, large]" alt="Carmen at the Ship"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image4" data-reveal>
-            <img src="img/gallery/Image4-Large.png" alt="Carmen at the Ship" />
+            <img data-interchange="[img/Image4-Small.png, small]
+            [img/img/gallery/Image4-Medium.png, medium],[img/gallery/Image4-Large.png, large]" alt="Carmen at the Ship" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -487,16 +456,13 @@
             <!-- Image 5 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image5">
-              <img srcset="img/gallery/Image5-Small.png 300w,
-                    img/gallery/Image5-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image4-Medium.png" alt="Rico on Class"/>
+              <img data-interchange="[img/Image5-Small.png, small]
+              [img/img/gallery/Image5-Medium.png, medium],[img/gallery/Image5-Medium.png, large]" alt="Rico on Class"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image5" data-reveal>
-            <img src="img/gallery/Image5-Large.png" alt="Rico on Class" />
+            <img data-interchange="[img/Image5-Small.png, small]
+            [img/img/gallery/Image5-Medium.png, medium],[img/gallery/Image5-Large.png, large]" alt="Rico on Class" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -504,16 +470,13 @@
           <!-- Image 6 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image6">
-              <img srcset="img/gallery/Image6-Small.png 300w,
-                    img/gallery/Image6-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image6-Medium.png" alt="Carmen Smilling"/>
+              <img data-interchange="[img/Image6-Small.png, small]
+              [img/img/gallery/Image6-Medium.png, medium],[img/gallery/Image6-Medium.png, large]" alt="Carmen Smilling"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image6" data-reveal>
-            <img src="img/gallery/Image6-Large.png" alt="Carmen Smilling" />
+            <img data-interchange="[img/Image6-Small.png, small]
+            [img/img/gallery/Image6-Medium.png, medium],[img/gallery/Image6-Large.png, large]" alt="Carmen Smilling" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -521,16 +484,13 @@
           <!-- Image 7 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image7">
-              <img srcset="img/gallery/Image7-Small.png 300w,
-                    img/gallery/Image7-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image7-Medium.png" alt="Base at Bug Planet"/>
+              <img data-interchange="[img/Image7-Small.png, small]
+              [img/img/gallery/Image7-Medium.png, medium],[img/gallery/Image7-Medium.png, large]" alt="Base at Bug Planet"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image7" data-reveal>
-            <img src="img/gallery/Image7-Large.png" alt="Base at Bug Planet" />
+            <img data-interchange="[img/Image7-Small.png, small]
+            [img/img/gallery/Image7-Medium.png, medium],[img/gallery/Image7-Large.png, large]" alt="Base at Bug Planet" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -538,16 +498,13 @@
           <!-- Image 8 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image8">
-              <img srcset="img/gallery/Image8-Small.png 300w,
-                    img/gallery/Image8-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image8-Medium.png" alt="Carmen Flying Ship"/>
+              <img data-interchange="[img/Image8-Small.png, small]
+              [img/img/gallery/Image8-Medium.png, medium],[img/gallery/Image8-Medium.png, large]" alt="Carmen Flying Ship"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image8" data-reveal>
-            <img src="img/gallery/Image8-Large.png" alt="Carmen Flying Ship" />
+            <img data-interchange="[img/Image8-Small.png, small]
+            [img/img/gallery/Image8-Medium.png, medium],[img/gallery/Image8-Large.png, large]" alt="Carmen Flying Ship" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -555,16 +512,13 @@
           <!-- Image 9 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image9">
-              <img srcset="img/gallery/Image9-Small.png 300w,
-                    img/gallery/Image9-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image9-Medium.png" alt="Rico Watching the News About Buenos Aires"/>
+              <img data-interchange="[img/Image9-Small.png, small]
+              [img/img/gallery/Image9-Medium.png, medium],[img/gallery/Image9-Medium.png, large]" alt="Rico Watching the News About Buenos Aires"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image9" data-reveal>
-            <img src="img/gallery/Image9-Large.png" alt="Rico Watching the News About Buenos Aires" />
+            <img data-interchange="[img/Image9-Small.png, small]
+            [img/img/gallery/Image9-Medium.png, medium],[img/gallery/Image9-Large.png, large]" alt="Rico Watching the News About Buenos Aires" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -572,16 +526,13 @@
           <!-- Image 10 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image10">
-              <img srcset="img/gallery/Image10-Small.png 300w,
-                    img/gallery/Image10-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image10-Medium.png" alt="Ships in Space"/>
+              <img data-interchange="[img/Image10-Small.png, small]
+              [img/img/gallery/Image10-Medium.png, medium],[img/gallery/Image10-Medium.png, large]" alt="Ships in Space"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image10" data-reveal>
-            <img src="img/gallery/Image10-Large.png" alt="Ships in Space" />
+            <img data-interchange="[img/Image10-Small.png, small]
+            [img/img/gallery/Image10-Medium.png, medium],[img/gallery/Image10-Large.png, large]" alt="Ships in Space" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -589,16 +540,13 @@
           <!-- Image 11 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image11">
-              <img srcset="img/gallery/Image11-Small.png 300w,
-                    img/gallery/Image11-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image11-Medium.png" alt="Rico, Carmen and Carl Shaking Hands"/>
+              <img data-interchange="[img/Image11-Small.png, small]
+              [img/img/gallery/Image11-Medium.png, medium],[img/gallery/Image11-Medium.png, large]" alt="Rico, Carmen and Carl Shaking Hands"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image11" data-reveal>
-            <img src="img/gallery/Image11-Large.png" alt="Rico, Carmen and Carl Shaking Hands" />
+            <img data-interchange="[img/Image11-Small.png, small]
+            [img/img/gallery/Image11-Medium.png, medium],[img/gallery/Image11-Large.png, large]" alt="Rico, Carmen and Carl Shaking Hands" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -606,16 +554,13 @@
           <!-- Image 12 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image12">
-              <img srcset="img/gallery/Image12-Small.png 300w,
-                    img/gallery/Image12-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                              src="img/gallery/Image12-Medium.png" alt="Solider Shooting at Bug"/>
+              <img data-interchange="[img/Image12-Small.png, small]
+              [img/img/gallery/Image12-Medium.png, medium],[img/gallery/Image12-Medium.png, large]" alt="Solider Shooting at Bug"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image12" data-reveal>
-            <img src="img/gallery/Image12-Large.png" alt="Solider Shooting at Bug" />
+            <img data-interchange="[img/Image12-Small.png, small]
+            [img/img/gallery/Image12-Medium.png, medium],[img/gallery/Image12-Large.png, large]" alt="Solider Shooting at Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -623,16 +568,13 @@
           <!-- Image 13 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image13">
-              <img srcset="img/gallery/Image13-Small.png 300w,
-                    img/gallery/Image13-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image13-Medium.png" alt="Rico Running from Bug"/>
+              <img data-interchange="[img/Image13-Small.png, small]
+              [img/img/gallery/Image13-Medium.png, medium],[img/gallery/Image13-Medium.png, large]" alt="Rico Running from Bug"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image13" data-reveal>
-            <img src="img/gallery/Image13-Large.png" alt="Rico Running from Bug" />
+            <img data-interchange="[img/Image13-Small.png, small]
+            [img/img/gallery/Image13-Medium.png, medium],[img/gallery/Image13-Large.png, large]" alt="Rico Running from Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -640,16 +582,13 @@
           <!-- Image 14 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image14">
-              <img srcset="img/gallery/Image14-Small.png 300w,
-                    img/gallery/Image14-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image14-Medium.png" alt="Bugs on Planet Bug"/>
+              <img data-interchange="[img/Image14-Small.png, small]
+              [img/img/gallery/Image14-Medium.png, medium],[img/gallery/Image14-Medium.png, large]" alt="Bugs on Planet Bug"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image14" data-reveal>
-            <img src="img/gallery/Image14-Large.png" alt="Bugs on Planet Bug" />
+            <img data-interchange="[img/Image14-Small.png, small]
+            [img/img/gallery/Image14-Medium.png, medium],[img/gallery/Image14-Large.png, large]" alt="Bugs on Planet Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -657,16 +596,13 @@
           <!-- Image 15 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image15">
-              <img srcset="img/gallery/Image15-Small.png 300w,
-                    img/gallery/Image15-Medium.png 600w"
-                    sizes="(max-width: 23em) 330px,
-                    (max-width: 50em) 600px,
-                    (min-width: 64em) 100%"
-                    src="img/gallery/Image9-Medium.png" alt="Rico and Soldiers Listening to Instructions"/>
+              <img data-interchange="[img/Image15-Small.png, small]
+              [img/img/gallery/Image15-Medium.png, medium],[img/gallery/Image15-Medium.png, large]" alt="Rico and Soldiers Listening to Instructions"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image15" data-reveal>
-            <img src="img/gallery/Image15-Large.png" alt="Rico and Soldiers Listening to Instructions" />
+            <img data-interchange="[img/Image15-Small.png, small]
+            [img/img/gallery/Image15-Medium.png, medium],[img/gallery/Image15-Large.png, large]" alt="Rico and Soldiers Listening to Instructions" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -674,16 +610,13 @@
           <!-- Image 16 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image16">
-              <img srcset="img/gallery/Image16-Small.png 300w,
-                img/gallery/Image16-Medium.png 600w"
-                sizes="(max-width: 23em) 330px,
-                (max-width: 50em) 600px,
-                (min-width: 64em) 100%"
-                src="img/gallery/Image16-Medium.png" alt="Giant Bug"/>
+              <img data-interchange="[img/Image16-Small.png, small]
+              [img/img/gallery/Image16-Medium.png, medium],[img/gallery/Image16-Medium.png, large]" alt="Giant Bug"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image16" data-reveal>
-            <img src="img/gallery/Image16-Large.png" alt="Giant Bug" />
+            <img data-interchange="[img/Image16-Small.png, small]
+            [img/img/gallery/Image16-Medium.png, medium],[img/gallery/Image16-Large.png, large]" alt="Giant Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
@@ -691,33 +624,27 @@
           <!-- Image 17 -->
           <div class="galleryItem small-6 medium-4 large-2">
             <a data-open="image17">
-            <img srcset="img/gallery/Image17-Small.png 300w,
-                  img/gallery/Image17-Medium.png 600w"
-                  sizes="(max-width: 23em) 330px,
-                  (max-width: 50em) 600px,
-                  (min-width: 64em) 100%"
-                  src="img/gallery/Image17-Medium.png" alt="Soldiers Looking Up"/>
+              <img data-interchange="[img/Image17-Small.png, small]
+              [img/img/gallery/Image17-Medium.png, medium],[img/gallery/Image17-Medium.png, large]" alt="Soldiers Looking Up"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image17" data-reveal>
-            <img src="img/gallery/Image17-Large.png" alt="Soldiers Looking Up" />
+            <img data-interchange="[img/Image17-Small.png, small]
+            [img/img/gallery/Image17-Medium.png, medium],[img/gallery/Image17-Large.png, large]" alt="Soldiers Looking Up" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
           </div>
           <!-- Image 18 -->
           <div class="galleryItem small-6 medium-4 large-2">
-              <a data-open="image18">
-              <img srcset="img/gallery/Image18-Small.png 300w,
-                          img/gallery/Image18-Medium.png 600w"
-                          sizes="(max-width: 23em) 330px,
-                          (max-width: 50em) 600px,
-                          (min-width: 64em) 100%"
-                          src="img/gallery/Image18-Medium.png" alt="Military Base on Planet Bug9"/>
+            <a data-open="image18">
+              <img data-interchange="[img/Image18-Small.png, small]
+              [img/img/gallery/Image18-Medium.png, medium],[img/gallery/Image18-Medium.png, large]" alt="Military Base on Planet Bug9"/>
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image18" data-reveal>
-            <img src="img/gallery/Image18-Large.png" alt="Military Base on Planet Bug" />
+            <img data-interchange="[img/Image18-Small.png, small]
+            [img/img/gallery/Image18-Medium.png, medium],[img/gallery/Image18-Large.png, large]" alt="Military Base on Planet Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">CLOSE</span>
             </button>
