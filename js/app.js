@@ -40,6 +40,7 @@
     }
   });
 
+
   var aboutSection = document.querySelector('#about');
   var gallerySection = document.querySelector('#gallery');
   var anniversarySection = document.querySelector('#anniversary');
@@ -49,30 +50,44 @@
   var menu = document.querySelector('.lateralMenu');
 
 
-  //Change Menu Color
-  function changeHeaderColor() {
-    let aboutOffset = aboutSection.getBoundingClientRect();
-    let galleryOffset = gallerySection.getBoundingClientRect();
-    let anniversaryOffset = anniversarySection.getBoundingClientRect();
-    let contactOffset = contactSection.getBoundingClientRect();
+  let lightSection = document.querySelectorAll('.light');
 
-    if(aboutOffset.top < (menu.offsetHeight) && aboutOffset.bottom > (menu.offsetHeight/2)) {
-      header.classList.add('dark-menu');
-    }
-    else if(galleryOffset.top < (menu.offsetHeight) && galleryOffset.bottom > (menu.offsetHeight/2)) {
-      header.classList.add('dark-menu');
-    }
-    else if(anniversaryOffset.top < (menu.offsetHeight) && anniversaryOffset.bottom > (menu.offsetHeight/2)) {
-      header.classList.add('dark-menu');
-    }
-    else if(contactOffset.top < (menu.offsetHeight) && contactOffset.bottom > (menu.offsetHeight/2)) {
-      header.classList.add('dark-menu');
-    }
-    else {
-      header.classList.remove('dark-menu');
-    }
-  }
+  window.addEventListener('scroll', function() {
+    lightSection.forEach(el => {
+      let sectionOffset = el.getBoundingClientRect();
+      if(sectionOffset.top < (menu.offsetHeight) && sectionOffset.bottom > (menu.offsetHeight/2)) {
+        header.classList.add('dark-menu');
+      }
+      else {
+        header.classList.remove('dark-menu');
+      }
+    });
+  });
 
 
-  window.addEventListener('scroll', changeHeaderColor);
+  // //Change Menu Color
+  // function changeHeaderColor() {
+  //   let aboutOffset = aboutSection.getBoundingClientRect();
+  //   let galleryOffset = gallerySection.getBoundingClientRect();
+  //   let anniversaryOffset = anniversarySection.getBoundingClientRect();
+  //   let contactOffset = contactSection.getBoundingClientRect();
+
+  //   if(aboutOffset.top < (menu.offsetHeight) && aboutOffset.bottom > (menu.offsetHeight/2)) {
+  //     header.classList.add('dark-menu');
+  //   }
+  //   else if(galleryOffset.top < (menu.offsetHeight) && galleryOffset.bottom > (menu.offsetHeight/2)) {
+  //     header.classList.add('dark-menu');
+  //   }
+  //   else if(anniversaryOffset.top < (menu.offsetHeight) && anniversaryOffset.bottom > (menu.offsetHeight/2)) {
+  //     header.classList.add('dark-menu');
+  //   }
+  //   else if(contactOffset.top < (menu.offsetHeight) && contactOffset.bottom > (menu.offsetHeight/2)) {
+  //     header.classList.add('dark-menu');
+  //   }
+  //   else {
+  //     header.classList.remove('dark-menu');
+  //   }
+  // }
+
+  // window.addEventListener('scroll', changeHeaderColor);
 })();

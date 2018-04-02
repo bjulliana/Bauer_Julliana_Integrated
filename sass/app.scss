@@ -1065,10 +1065,10 @@ section#anniversary {
 TEMPORARY FIX FOR REVEAL BUG
 ----------------------------------------------*/
 
-.is-reveal-open body,
-body.is-reveal-open {
-	overflow: inherit !important;
-}
+// .is-reveal-open body,
+// body.is-reveal-open {
+// 	overflow: visible !important;
+// }
 
 
 /* --------------------------------------------

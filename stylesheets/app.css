@@ -1411,12 +1411,6 @@ section#anniversary {
 /* --------------------------------------------
 TEMPORARY FIX FOR REVEAL BUG
 ----------------------------------------------*/
-/* line 1068, ../sass/app.scss */
-.is-reveal-open body,
-body.is-reveal-open {
-  overflow: inherit !important;
-}
-
 /* --------------------------------------------
 VIDEO CONTROLS
 ----------------------------------------------*/
