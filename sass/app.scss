@@ -707,7 +707,7 @@ GALLERY
 .reveal-overlay {
   background-color: rgba(10,10,10,.85);
   .reveal {
-    margin-top: 5%;
+    margin-top: 25%;
 	overflow-y: visible;
 	padding: 0;
 	border: 0;
@@ -1038,7 +1038,7 @@ section#anniversary {
 	background-color: $white;
 	}
 	figcaption {
-		@include pos(absolute, null, null, 0, 0);
+		@include pos(absolute, null, null, null, 0);
 		width: 100%;
 		padding: 16px;
 		background: $lightBlue;
