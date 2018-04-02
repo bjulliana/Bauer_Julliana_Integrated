@@ -12,6 +12,17 @@
     mobileIcon.classList.toggle('active');
   });
 
+  //Override Fountation Reveal Bug
+  let closeButton = document.querySelectorAll('.close-button'),
+      body = document.querySelector('body'),
+      html = document.querySelector('html');
+
+    closeButton.forEach(el => {
+      el.addEventListener('click', function() {
+        body.classList.remove('is-reveal-open');
+        html.classList.remove('is-reveal-open');
+    });
+  });
 
   //Header add Class on Scroll & Back to Top
   window.addEventListener('scroll', function(){
