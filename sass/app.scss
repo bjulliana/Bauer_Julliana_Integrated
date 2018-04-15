@@ -54,77 +54,47 @@ body {
 	clear: both;
 }
 h1 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 2.6rem;
+	@include font($titleFont, 300, $black, 2.6rem);
 	em:after {
 		height: 0.9rem;
 		bottom: 1.5rem;
 	}
 }
-
 h2 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 2.4rem;
+	@include font($titleFont, 300, $black, 2.4rem);
 	em:after {
 		height: 0.7rem;
 		bottom: 0.5rem;
 	}
 }
-
 h3 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 1.9rem;
+	@include font($titleFont, 300, $black, 1.9rem);
 	em:after {
 		height: 0.6rem;
 		bottom: 0.3rem;
 	}
 }
-
 h4 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 1.125rem;
+	@include font($titleFont, 300, $black, 1.125rem);
 	em:after {
 		height: 0.4rem;
 		bottom: 0.3rem;
 	}
 }
-
 h5 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 0.9rem;
+	@include font($titleFont, 300, $black, 0.9rem);
 	em:after {
 		height: 0.3rem;
 		bottom: 0;
 	}
 }
-
 h6 {
-	font-family: $titleFont;
-	font-style: normal;
-	font-weight: 300;
-	color: $black;
-	font-size: 0.8rem;
+	@include font($titleFont, 300, $black, 0.8rem);
 	em:after {
 		height: 0.3rem;
 		bottom: 0;
 	}
 }
-
 ul {
 	padding: 0;
 	margin-left: 2em;
@@ -162,8 +132,6 @@ em {
 	}
 }
 .grid-container {
-	padding-right: 2em;
-	padding-left: 2em;
 	margin: 0 auto;
 }
 .main-container {
@@ -242,19 +210,19 @@ header {
 		}
 		.mobile-icon {
 			span {
-        @include tDelay(0);
-        background-color: $black;
+        	@include tDelay(0);
+        	background-color: $black;
 				&:before {
-          @include tDelay(0);
+          			@include tDelay(0);
 					background-color: $black;
 				}
 				&:after {
-          @include tDelay(0);
+          			@include tDelay(0);
 					background-color: $black;
 				}
 			}
 			&.active span {
-        @include tDelay(0.2s, 0);
+        		@include tDelay(0.2s, 0);
 				background-color: transparent;
 			}
 		}
@@ -283,21 +251,21 @@ header {
 	}
 	&.hover li {
 		&:hover a:before {
-      @include scaleXtransY(1, -50%);
+      		@include scaleXtransY(1, -50%);
 		}
 		&.active a:before {
-      @include scaleXtransY(1, -50%);
+      		@include scaleXtransY(1, -50%);
 		}
 		a:before {
 			content: '';
-      @include tOrigin(left center);
-      @include scaleXtransY(0, -50%);
-      @include tTransform(400ms cubic-bezier(1, 0, 0, 1) 0ms);
-      @include pos(absolute, 65%, 0, null, 5%);
-      display: block;
+			@include tOrigin(left center);
+			@include scaleXtransY(0, -50%);
+			@include tTransform(400ms cubic-bezier(1, 0, 0, 1) 0ms);
+			@include pos(absolute, 65%, 0, null, 5%);
+			display: block;
 			height: 0.5em;
 			background: $lightBlue;
-      z-index: -1;
+      		z-index: -1;
 		}
 	}
 }
@@ -307,49 +275,49 @@ header {
 .mobile-icon {
 	padding: 1rem !important;
 	span {
-    @include tDuration(0s);
-    @include tDelay(0, 0.2s);
+		@include tDuration(0s);
+		@include tDelay(0, 0.2s);
 		width: 35px;
 		height: 4px;
 		background-color: $white;
-    display: block;
+		display: block;
 		&:before {
-      @include tProperty();
-      @include tDuration(0.2s);
-      @include tDelay(0.2s, 0s);
+			@include tProperty();
+			@include tDuration(0.2s);
+			@include tDelay(0.2s, 0s);
 			position: absolute;
 			content: '';
 			width: 35px;
 			height: 4px;
 			background-color: $white;
 			display: block;
-      margin-top: -11px;
+			margin-top: -11px;
 		}
 		&:after {
-      @include tProperty();
-      @include tDuration(0.2s);
-      @include tDelay(0.2s, 0s);
+			@include tProperty();
+			@include tDuration(0.2s);
+			@include tDelay(0.2s, 0s);
 			position: absolute;
 			content: '';
 			width: 35px;
 			height: 4px;
 			background-color: $white;
 			display: block;
-      margin-top: 11px;
+			margin-top: 11px;
 		}
 	}
 	&.active span {
-    @include tDelay(0.2s, 0s);
-    background-color: transparent;
+		@include tDelay(0.2s, 0s);
+		background-color: transparent;
 		&:before {
-      @include tRotate(45deg);
-      @include tDelay(0s, 0.2s);
+			@include tRotate(45deg);
+			@include tDelay(0s, 0.2s);
 			margin-top: 0;
 		}
 		&:after {
-      @include tRotate(-45deg);
-      @include tDelay(0s, 0.2s);
-      margin-top: 0;
+			@include tRotate(-45deg);
+			@include tDelay(0s, 0.2s);
+			margin-top: 0;
 		}
 	}
 }
@@ -357,8 +325,8 @@ header {
 	opacity: 0;
 	width: 50%;
 	img {
-    @include transition(all 0.2s ease-in-out);
-    @include tDelay(0.2s);
+		@include transition(all 0.2s ease-in-out);
+		@include tDelay(0.2s);
 	}
 }
 
@@ -369,91 +337,83 @@ LATERAL MENU
 .lateralMenu {
 	@include pos(fixed, 30%, null, null, 0);
 	z-index: 100;
-}
-.lateralMenu li{
-	list-style: none;
-	list-style-position: outside;
-	display: block;
-	height: 48px;
-	width: 48px;
-	position: relative;
-}
-
-.lateralMenu a {
-	background: #fff;
-	background: rgba(255, 255, 255, 0.15);
-	height: 48px;
-	width: 48px;
-	display: block;
-	text-align: center;
-	font-size: 22px;
-	padding-top: 0.4rem;
-	color: #fff;
-	opacity: 1;
-	position: relative;
-	z-index: 1;
-	@include transition(0.2s)
-}
-
-.lateralMenu ul li {
-	position: relative;
-}
-.lateralMenu ul li:after,
-.lateralMenu a:after {
-	@include pos(absolute, 0, 0, 0, 0);
-	position: absolute;
-	content: "";
-	background: rgba(255,255,255,0);
-	border-radius: 100%;
-	-webkit-transform: scale(0.5);
-	transform: scale(0.5);
-	@include transition (0.2s cubic-bezier(0.215, 0.61, 0.355, 1));
-	z-index: -1;
-}
-.lateralMenu ul li.active:after,
-.lateralMenu a:hover:after{
-	-webkit-transform: none;
-	transform: none;
-	border-radius: 0;
-	background: rgba(255,255,255,0.15);
-	background: $lightBlue;
-}
-.lateralMenu ul li.active:after{
-	background: rgba(230, 230, 230, 0.12);
-}
-.lateralMenu a.marked{
-	color: #fff;
-	background: $lightBlue;
-}
-.lateralMenu .title{
-	position: absolute;
-	font-size: 1rem;
-	font-weight: 700;
-	left: 56px;
-	top: 17px;
-	color: #fff;
-	font-family: $titleFont;
-	text-transform: uppercase;
-	text-align: left;
-	width: 12rem;
-	border-bottom: 1px solid;
-	display: block;
-	@include transition(0.3s);
-	transform: translateX(10px);
-	visibility: hidden;
-	opacity: 0;
-}
-.lateralMenu li:hover .title{
-	-webkit-transform: none;
-	transform: none;
-	display: block;
-	opacity: 1;
-	visibility: visible;
-}
-
-	.lateralMenu a.active{
-		background-color: rgba(230, 230, 230, 0.12);
+	li{
+		list-style: none;
+		list-style-position: outside;
+		display: block;
+		height: 48px;
+		width: 48px;
+		position: relative;
+		&:hover .title{
+			-webkit-transform: none;
+			transform: none;
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
 	}
+	a {
+		background: #fff;
+		background: rgba(255, 255, 255, 0.15);
+		height: 48px;
+		width: 48px;
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		padding-top: 0.4rem;
+		color: #fff;
+		opacity: 1;
+		position: relative;
+		z-index: 1;
+		@include transition(0.2s);
+		&:after {
+			@include pos(absolute, 0, 0, 0, 0);
+			position: absolute;
+			content: "";
+			background: rgba(255,255,255,0);
+			border-radius: 100%;
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
+			@include transition (0.2s cubic-bezier(0.215, 0.61, 0.355, 1));
+			z-index: -1;
+		}
+		&:hover:after{
+			-webkit-transform: none;
+			transform: none;
+			border-radius: 0;
+			background: rgba(255,255,255,0.15);
+			background: $lightBlue;
+		}
+	}
+	ul li {
+		position: relative;
+		&:after {
+			@include pos(absolute, 0, 0, 0, 0);
+			position: absolute;
+			content: "";
+			background: rgba(255,255,255,0);
+			border-radius: 100%;
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
+			@include transition (0.2s cubic-bezier(0.215, 0.61, 0.355, 1));
+			z-index: -1;
+		}
+	}
+	.title{
+		@include pos(absolute, 17px, null, null, 56px);
+		@include font($titleFont, 700, $white, 1rem);
+		text-transform: uppercase;
+		text-align: left;
+		width: 12rem;
+		border-bottom: 1px solid;
+		display: block;
+		@include transition(0.3s);
+		transform: translateX(10px);
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
 
 .dark-menu {
 	.lateralMenu {
@@ -474,7 +434,6 @@ VIDEO COVER
 	width: 60%;
 	padding-bottom: 7rem;
 }
-
 .video-bg {
   @include pos(absolute, 0, 0, 0, 0);
 	background-repeat: no-repeat;
@@ -492,6 +451,14 @@ video {
 	padding: 4em 0;
 	height: 100vh;
 }
+
+.image-bg img {
+		height: 100vh;
+		object-fit: cover;
+		top: 0;
+		position: absolute;
+}
+
 .button {
   @include transition(all 0.3s ease);
 	position: relative;
@@ -506,10 +473,10 @@ video {
 			transform: scale(1.1) !important;
 		}
 		&:before {
-      @include transition(all 0.5s ease);
-      @include pos(absolute, 50%, null, null, 52%);
+			@include transition(all 0.5s ease);
+			@include pos(absolute, 50%, null, null, 52%);
 			-webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      		transform: translate(-50%, -50%);
 			content: '';
 			border-style: solid;
 			border-width: 0.6rem 0 0.6rem 1.1rem;
@@ -526,16 +493,11 @@ video {
 	position: relative;
 }
 
-
 .scroll-button {
-	position:absolute;
-	bottom:0;
-	left:50%;
+	@include pos(absolute, null, null, 0, 50%);
+	@include font($titleFont, 900, $white, 1rem);
 	display:inline-block;
 	padding:.83333rem;
-	font-family: $titleFont;
-	font-size: 1rem;
-	font-weight:900;
 	letter-spacing:.05em;
 	text-align:center;
 	text-transform:uppercase;
@@ -546,34 +508,23 @@ video {
 		display:block;
 		animation:scrollDown 2s infinite;
 	}
-   }
-   @media only screen and (min-width:769px) {
-	.scroll-button {
-	 padding:1.66667rem 2.5rem
+	&:hover {
+		color:#fff;
+		background-color:rgba(0,0,0,.65)
 	}
-   }
-   .scroll-button:hover {
-	color:#fff;
-	background-color:rgba(0,0,0,.65)
-   }
+}
 
    @keyframes scrollDown {
-	0%,20%,50%,80%,to {
-	 transform:translateY(0)
-	}
-	40% {
-	 transform:translateY(-.38889rem)
-	}
-	60% {
-	 transform:translateY(-.16667rem)
-	}
+		0%,20%,50%,80%,to {
+	 		transform:translateY(0)
+		}
+		40% {
+			transform:translateY(-.38889rem)
+		}
+		60% {
+	 		transform:translateY(-.16667rem)
+		}
    }
-
-/* --------------------------------------------
-ABOUT SECTION
-----------------------------------------------*/
-
-
 
 /* --------------------------------------------
 IMAGES
@@ -590,20 +541,19 @@ CAST SECTION
 
 .cast-container {
 	margin: 0 0 -1px 0;
-	cursor: pointer;
 	padding: 0 !important;
 	overflow: hidden;
-  visibility: visible;
-  transform: translateY(0);
-  opacity: 1;
-  @include tTransform(0.4s ease 0.5s, opacity 0.4s ease 0.5s);
-	.vertical-caption {
-    @include pos(absolute, 4.0rem, null, null, 2.5rem);
-		text-align: right;
-    -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-            writing-mode: vertical-rl;
-    @include tRotate(180deg);
+	visibility: visible;
+	transform: translateY(0);
+	opacity: 1;
+	@include tTransform(0.4s ease 0.5s, opacity 0.4s ease 0.5s);
+		.vertical-caption {
+			@include pos(absolute, 4.0rem, null, null, 2.5rem);
+			text-align: right;
+			-ms-writing-mode: tb-rl;
+			-webkit-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			@include tRotate(180deg);
 		h5 {
 			font-size: 1.0rem;
 			color: $white;
@@ -613,45 +563,52 @@ CAST SECTION
 			margin: 0;
 		}
 	}
+	&:hover {
+		.cast-link {
+			-webkit-transform: scale(1) !important;
+			transform: scale(1) !important;
+		}
+		.cast-container-inner {
+			-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+			&:before {
+				opacity: 0.1;
+			}
+		}
+	}
+	.cast-link {
+		@include pos(absolute, null, 0, 0, 0);
+		@include transition(all 0.35s ease-out);
+		width: 100%;
+		text-align: center;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		padding: 0.5rem 0;
+		background-color: rgba($darkBlue, 0.5);
+		cursor: pointer;
+		a {
+			text-decoration: none;
+		}
+		h5 {
+			font-size: 1rem;
+			color: $white;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		&:hover {
+			p {
+				font-weight: 700;
+			}
+		}
+  	}
 	.cast-container-inner {
     height: 100%;
     @include transition(all 0.35s ease-out);
 		img {
 			width: 100%;
 		}
-		&:hover {
-			-webkit-transform: scale(1.2);
-			transform: scale(1.2);
-			&:before {
-				opacity: 0.1;
-			}
-			.cast-link {
-				-webkit-transform: scale(1) !important;
-				transform: scale(1) !important;
-			}
-		}
 		&:before {
-      @include transition(all 0.35s ease-out);
-		}
-		.cast-link {
-      @include pos(absolute, null, 0, 3em, 0);
-      @include transition(all 0.35s ease-out);
-			width: 100%;
-			text-align: center;
-			-webkit-transform: scale(0);
-      transform: scale(0);
-			a {
-				text-decoration: none;
-			}
-			h5 {
-				font-size: 0.93rem;
-				color: $white;
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-			&:hover p {
-				font-weight: 700;
-			}
+      		@include transition(all 0.35s ease-out);
 		}
 	}
 }
@@ -691,7 +648,7 @@ GALLERY
 		display: block;
 		opacity: 0.8;
 		width: 100%;
-    opacity: 1;
+    	opacity: 1;
 		-webkit-transition: opacity 1s, -webkit-transform 0.5s;
 		transition: opacity 1s, -webkit-transform 0.5s;
 		transition: opacity 1s, transform 0.5s;
@@ -705,27 +662,32 @@ GALLERY
 }
 
 .reveal-overlay {
-  background-color: rgba(10,10,10,.85);
-  .reveal {
-    margin-top: 25%;
-	overflow-y: visible;
-	padding: 0;
-	border: 0;
-	background-color: transparent;
-	width: 80%;
-	margin-left: auto;
-  }
-  .close-button {
-	position: absolute;
-	font-family: $titleFont;
-	right: 0%;
-	top: 0%;
-	font-size: 1em;
-	color: #FFF;
-	cursor: pointer;
-	background-color: #0009;
-	padding: 0.3rem 0.5rem;
-  }
+	background-color: rgba(10,10,10,.85);
+	.reveal {
+		margin-top: 25%;
+		overflow-y: visible;
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		width: 80%;
+		margin-left: auto;
+  	}
+	.close-button {
+		position: absolute;
+		font-family: $titleFont;
+		right: 0%;
+		top: 0%;
+		color: #FFF;
+		cursor: pointer;
+		background-color: #0009;
+		padding: 0.3rem 0.5rem;
+		&:hover {
+			background-color: $darkBlue;
+		}
+	}
+	.text {
+		font-size: 1em;
+  	}
 }
 
 /* --------------------------------------------
@@ -754,7 +716,7 @@ VIDEOS SECTION
 		position: initial;
 	}
 	&.video-box span.button {
-    @include pos(absolute, 33%, 0, null, 0);
+    	@include pos(absolute, 33%, 0, null, 0);
 		margin-left: auto !important;
 		margin-right: auto !important;
 		border: none !important;
@@ -784,15 +746,13 @@ input::placeholder {
 	margin-bottom: 4.0em;
 }
 .button.submit {
-  @include transition(all 0.3s ease);
-	font-family: $titleFont;
-	font-size: 1rem;
-	color: $lightBlue;
-	font-weight: 500;
+	@include transition(all 0.3s ease);
+	@include font($titleFont, 500, $lightBlue, 1rem);
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	text-align: center;
-	height: 73%;
+	height: 3.1rem;
+	margin-top: 1.8rem;
 	&.filled {
 		color: $white;
 		background: $lightBlue;
@@ -802,7 +762,10 @@ input::placeholder {
 	}
 }	  
 
-
+label {
+	font-family: $titleFont;
+	font-size: 1rem;
+}
 /* --------------------------------------------
 FOOTER
 ----------------------------------------------*/
@@ -907,7 +870,6 @@ OVERLAYS
 BACK TO TOP
 ----------------------------------------------*/
 
-
 .backtotop {
 	@include pos(fixed, null, 2rem, 3rem, null);
 	width: 3.75rem;
@@ -934,7 +896,6 @@ BACK TO TOP
 	&:before {
 		transform: rotate(-45deg);
 		left: 34px;
-	    // box-shadow: -8px 14px 0px 8px darken($darkBlue, 8%);
 	}
 	&:after {
 		transform: rotate(45deg);
@@ -985,57 +946,57 @@ section#anniversary {
 }
 
 .hotspots {
-  @include pos(absolute, 0, 0, 0, 0);
-  overflow: hidden;
-  .hotspot {
 	@include pos(absolute, 0, 0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    &:nth-child( 1 ) .trigger {
-      top: 20%;
-      left: 8%;
-	}
-    &:nth-child( 2 ) .trigger {
-      top: 66%;
-      left: 92%;
-	}
-    &:nth-child( 3 ) .trigger {
-      top: 80%;
-      left: 43%;
-	}
-    .trigger {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 36px;
-      height: 36px;
-      background: $white;
-      color: $darkBlue;
-      border-radius: 50%;
-      transform: translate( -50%, -50% );
-      cursor: pointer;
-      pointer-events: all;
-      box-shadow: 0 0 0 0 $black;
-      transition: box-shadow .4s;
-	  user-select: none;
-	  z-index: 2;
-      &:hover {
-		box-shadow: 0 0 0 8px rgba($white, .5 );
+	overflow: hidden;
+		.hotspot {
+			@include pos(absolute, 0, 0, 0, 0);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			pointer-events: none;
+			&:nth-child( 1 ) .trigger {
+				top: 20%;
+				left: 8%;
+			}
+			&:nth-child( 2 ) .trigger {
+				top: 66%;
+				left: 92%;
+			}
+			&:nth-child( 3 ) .trigger {
+				top: 80%;
+				left: 43%;
+			}
+		.trigger {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 36px;
+			height: 36px;
+			background: $white;
+			color: $darkBlue;
+			border-radius: 50%;
+			transform: translate( -50%, -50% );
+			cursor: pointer;
+			pointer-events: all;
+			box-shadow: 0 0 0 0 $black;
+			transition: box-shadow .4s;
+			user-select: none;
+			z-index: 2;
+			&:hover {
+				box-shadow: 0 0 0 8px rgba($white, .5 );
+			}
+			i {
+				z-index: 2;
+			}
 		}
-	  i {
-		z-index: 2;
-	  }
 	}
-  }
 }
 
 .reveal {
 	figure {
-	background-color: $white;
+		background-color: $white;
 	}
 	figcaption {
 		@include pos(absolute, null, null, null, 0);
@@ -1060,17 +1021,6 @@ section#anniversary {
 	}
 }
 
-
-/* --------------------------------------------
-TEMPORARY FIX FOR REVEAL BUG
-----------------------------------------------*/
-
-// .is-reveal-open body,
-// body.is-reveal-open {
-// 	overflow: visible !important;
-// }
-
-
 /* --------------------------------------------
 VIDEO CONTROLS
 ----------------------------------------------*/
@@ -1079,7 +1029,6 @@ VIDEO CONTROLS
 	transform: translate(0, 0);
 }
 
-
 .lightbox {
 	display: none;
 	position: absolute; 
@@ -1087,7 +1036,7 @@ VIDEO CONTROLS
 	width: 100%; 
 	height: 100%; 
 	text-align: center;
-	background-color: rgba(0,0,0,0.95);
+	background-color: rgba(0,0,0,0.5);
 	z-index: 9999;
 }
 
@@ -1095,12 +1044,15 @@ VIDEO CONTROLS
 	position: absolute;
 	font-family: $titleFont;
 	right: 10%;
-	top: 21%;
+	top: 5rem;
 	font-size: 1em;
 	color: #FFF;
 	cursor: pointer;
 	background-color: #0009;
 	padding: 0.3rem 0.5rem;
+	&:hover {
+		background-color: $darkBlue;
+	}
 }
 
 .show-lightbox { display: block; }
@@ -1111,7 +1063,7 @@ VIDEO CONTROLS
 
 #cover_video video {
 	width: 80%;
-	margin-top: 15%;
+	margin-top: 5rem;
 	height: auto;
 }
 
@@ -1126,7 +1078,6 @@ VIDEO CONTROLS
 		display: block;
 	}
 }
-
 
 #controls {
 	display: flex;

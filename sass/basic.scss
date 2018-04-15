@@ -20,6 +20,13 @@ $titleFont: 'Electrolize', sans-serif;;
   line-height: 1.74;
 }
 
+@mixin font($font, $weight, $color, $size) {
+  font-family: $font;
+	font-weight: $weight;
+	color: $color;
+	font-size: $size;
+}
+
 @mixin pos($position, $top:null, $right:null, $bottom:null, $left:null) {
   position: $position;
   top: $top;
@@ -45,7 +52,6 @@ $titleFont: 'Electrolize', sans-serif;;
 	margin: 0 0 1.2em;
 	outline: none;
 	height: auto;
-	border: 1px solid $mediumGray;
 	background-color: $white;
 }
 

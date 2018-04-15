@@ -64,7 +64,7 @@ min-width 40em
 @media screen and (min-width: 40em) {
   /* line 58, ../sass/mediaQueries.scss */
   section {
-    padding: 4em;
+    padding: 4em 2em;
   }
 
   /* line 61, ../sass/mediaQueries.scss */
@@ -107,7 +107,7 @@ min-width 40em
 
   /* line 85, ../sass/mediaQueries.scss */
   .homeLogo {
-    width: 40%;
+    width: 30%;
   }
 
   /* line 89, ../sass/mediaQueries.scss */
@@ -117,7 +117,7 @@ min-width 40em
 
   /* line 94, ../sass/mediaQueries.scss */
   .reveal-overlay .reveal {
-    margin-top: 5%;
+    margin-top: 3%;
   }
   /* line 97, ../sass/mediaQueries.scss */
   .reveal-overlay figcaption {
@@ -128,32 +128,32 @@ min-width 40em
 min-width 50em
 ----------------------------------------------*/
 @media screen and (min-width: 50em) {
-  /* line 111, ../sass/mediaQueries.scss */
+  /* line 108, ../sass/mediaQueries.scss */
   .playButton {
     padding-top: 40px;
   }
 
-  /* line 116, ../sass/mediaQueries.scss */
+  /* line 112, ../sass/mediaQueries.scss */
   header.small .logo {
     width: 70%;
   }
-  /* line 119, ../sass/mediaQueries.scss */
+  /* line 115, ../sass/mediaQueries.scss */
   header.small {
     background-color: transparent;
     border-bottom: 0;
   }
 
-  /* line 124, ../sass/mediaQueries.scss */
+  /* line 120, ../sass/mediaQueries.scss */
   #mobileMenu {
     display: none !important;
   }
 
-  /* line 127, ../sass/mediaQueries.scss */
+  /* line 123, ../sass/mediaQueries.scss */
   .mobile-icon {
     display: none !important;
   }
 
-  /* line 130, ../sass/mediaQueries.scss */
+  /* line 126, ../sass/mediaQueries.scss */
   .logo {
     width: 100%;
   }
@@ -162,48 +162,47 @@ min-width 50em
 min-width 60em
 ----------------------------------------------*/
 @media screen and (min-width: 60em) {
-  /* line 142, ../sass/mediaQueries.scss */
+  /* line 135, ../sass/mediaQueries.scss */
   .button.play {
     width: 5.5rem;
     height: 5.5rem;
   }
 
-  /* line 146, ../sass/mediaQueries.scss */
-  #cover_video video {
-    width: 70%;
-    margin-top: 10%;
+  /* line 139, ../sass/mediaQueries.scss */
+  .close-lightbox {
+    right: 10%;
   }
 
-  /* line 150, ../sass/mediaQueries.scss */
-  .close-lightbox {
-    right: 15%;
-    top: 17%;
+  /* line 143, ../sass/mediaQueries.scss */
+  .grid-container {
+    padding-right: 2em;
+    padding-left: 2em;
   }
 }
 /* --------------------------------------------
 min-width 64em
 ----------------------------------------------*/
 @media screen and (min-width: 64em) {
-  /* line 162, ../sass/mediaQueries.scss */
+  /* line 155, ../sass/mediaQueries.scss */
   .top-bar {
     padding-left: 4em;
     padding-right: 4em;
   }
 
-  /* line 166, ../sass/mediaQueries.scss */
+  /* line 159, ../sass/mediaQueries.scss */
   .playButton {
     padding-top: 50px;
   }
 
-  /* line 169, ../sass/mediaQueries.scss */
+  /* line 162, ../sass/mediaQueries.scss */
   .homeLogo {
     width: 25%;
     padding-bottom: 10rem;
   }
 
-  /* line 173, ../sass/mediaQueries.scss */
+  /* line 166, ../sass/mediaQueries.scss */
   .reveal.small {
-    width: 50%;
+    width: 40%;
     max-width: 75rem;
   }
 }
@@ -211,28 +210,21 @@ min-width 64em
 min-width 75em
 ----------------------------------------------*/
 @media screen and (min-width: 75em) {
-  /* line 187, ../sass/mediaQueries.scss */
+  /* line 177, ../sass/mediaQueries.scss */
   .playButton {
     padding-top: 70px;
   }
 
-  /* line 190, ../sass/mediaQueries.scss */
-  #cover_video video {
-    width: 60%;
-    margin-top: 5%;
-  }
-
-  /* line 194, ../sass/mediaQueries.scss */
+  /* line 180, ../sass/mediaQueries.scss */
   .close-lightbox {
-    right: 20%;
-    top: 10.5%;
+    right: 10%;
   }
 }
 /* --------------------------------------------
 OTHERS
 ----------------------------------------------*/
 @media screen and (max-width: 50em) {
-  /* line 205, ../sass/mediaQueries.scss */
+  /* line 191, ../sass/mediaQueries.scss */
   #mainMenu {
     display: none !important;
   }

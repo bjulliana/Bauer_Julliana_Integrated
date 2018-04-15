@@ -9,9 +9,10 @@
         var videoControls = document.querySelector('#controls');
         var video = document.querySelector('.videoCover');
         var coverButton = document.querySelector('.cover_button');
-        var videoPlayer = document.querySelector('video');
+        var videoButton = document.querySelector('.video_button');
         var lightbox = document.querySelector('.lightbox');
         var closeLightbox = document.querySelector('.close-lightbox');
+        var bgVideo = document.querySelector('.videoBG');
 
         // Create Video Controls
         var parent = document.createElement('div');
@@ -44,22 +45,30 @@
        fullscreen.style.display = 'none';
      }
 
+    //Load Video at Windows Load
+    function _loadVideos(){
+        video.load();
+        video.pause();
+    }
+
     //Play Video
     function _playVideo(){        
     lightbox.classList.add('show-lightbox');
     body.classList.add('noScroll');
-    videoPlayer.volume = 0.5;
+    video.volume = 0.5;
     volumeBar.value = 0.5;
-    videoPlayer.load();
-    videoPlayer.play();
+    video.play();
+    bgVideo.pause();
     };
 
+    //Close Lightbox and Stop Video
     function _closeLBox(){
     lightbox.classList.remove('show-lightbox');
     body.classList.remove('noScroll');
     video.pause();
     video.currentTime = 0;
     video.load();
+    bgVideo.play();
     }
 
     //Play Pause Video
@@ -144,24 +153,24 @@
               // (Note: this can only be called on document)
               if (document.exitFullscreen) {
                   document.exitFullscreen();
-                video.style.width = "60%";
+                video.style.width = "80%";
                 video.style.height = "auto";
-                video.style.marginTop = '10px';
+                video.style.marginTop = '5rem';
               } else if (document.mozCancelFullScreen) {
                     document.mozCancelFullScreen();
-                video.style.width = "60%";
+                video.style.width = "80%";
                 video.style.height = "auto";
-                video.style.marginTop = '10%';
+                video.style.marginTop = '5rem';
               } else if (document.webkitCancelFullScreen)  {
                     document.webkitCancelFullScreen();
-                video.style.width = "60%";
+                video.style.width = "80%";
                 video.style.height = "auto";
-                video.style.marginTop = '10%';
+                video.style.marginTop = '5rem';
               } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
-                    video.style.width = "60%";
+                    video.style.width = "80%";
                     video.style.height = "auto";
-                    video.style.marginTop = '10%';
+                    video.style.marginTop = '5rem';
                     setFullscreenData(false);
               }
           }
@@ -202,7 +211,7 @@ String.prototype.toHHMMSS = function () {
 	var time = minutes + ':' + seconds;
 	return time;
 };
-
+    videoButton.addEventListener('click', _playVideo);
     coverButton.addEventListener('click', _playVideo);
     closeLightbox.addEventListener('click', _closeLBox);
     playpause.addEventListener('click', _playPause);
@@ -213,6 +222,7 @@ String.prototype.toHHMMSS = function () {
     fullscreen.addEventListener('click', _toggleFullScreen);
     volumeBar.addEventListener('change', _changeVolume);
     mute.addEventListener('click', _toggleMute);
+    window.addEventListener('load', _loadVideos)
     
     // playpause.forEach(playpause => playpause.addEventListener('click', _playPause));
 

@@ -1,25 +1,26 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starship Troopers 20th Anniversary Edition</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="stylesheets/foundation.min.css">
-    <link rel="stylesheet" href="stylesheets/app.css">
-    <link rel="stylesheet" href="stylesheets/mediaQueries.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
-    <!-- END CSS -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starship Troopers 20th Anniversary Edition</title>
 
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Aldrich%7CBungee+Hairline%7CElectrolize%7CRajdhani%7CSarpanch" rel="stylesheet">
-    <!-- END FONTS -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/mediaQueries.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+  <!-- END CSS -->
 
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="img/favicon.png">
-    <!-- FAVICON -->
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Aldrich%7CBungee+Hairline%7CElectrolize%7CRajdhani%7CSarpanch" rel="stylesheet">
+  <!-- END FONTS -->
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/favicon.png">
+  <!-- FAVICON -->
 </head>
 
 <body>
@@ -30,10 +31,11 @@
     <header class="grid-x grid-padding-x transparent-bg large">
       <div class="title-bar grid-x hide-for-large">
         <div class="small-6 text-left">
-        <img class="logo" src="img/logo.png" width="40" alt="Logo">
-        </div>  
+          <img class="logo" src="img/logo.png" width="40" alt="Logo">
+        </div>
         <div class="small-6 text-right">
-          <button type="button" class="mobile-icon" data-toggle="offCanvasLeft"><span></span>
+          <button type="button" class="mobile-icon" data-toggle="offCanvasLeft">
+            <span></span>
           </button>
         </div>
       </div>
@@ -42,37 +44,44 @@
           <h2 class="hide">Main Navigation</h2>
           <ul id="latMenu" data-smooth-scroll>
             <li>
-              <a href="#home"><i class="fas fa-home"></i>
+              <a href="#home">
+                <i class="fas fa-home"></i>
               </a>
               <span class="title">Home</span>
             </li>
             <li>
-              <a href="#about"><i class="fas fa-info-circle"></i>
+              <a href="#about">
+                <i class="fas fa-info-circle"></i>
               </a>
               <span class="title">The Movie</span>
             </li>
             <li>
-              <a href="#cast"><i class="fas fa-user-circle"></i>
+              <a href="#cast">
+                <i class="fas fa-user-circle"></i>
               </a>
               <span class="title">The Cast</span>
             </li>
             <li>
-              <a href="#anniversary"><i class="fas fa-star"></i>
+              <a href="#anniversary">
+                <i class="fas fa-star"></i>
               </a>
               <span class="title">Anniversary Edition</span>
             </li>
             <li>
-              <a href="#videos"><i class="fas fa-film"></i>
+              <a href="#videos">
+                <i class="fas fa-film"></i>
               </a>
               <span class="title">Trailer</span>
             </li>
             <li>
-              <a href="#gallery"><i class="fas fa-image"></i>
+              <a href="#gallery">
+                <i class="fas fa-image"></i>
               </a>
               <span class="title">Gallery</span>
             </li>
             <li>
-              <a href="#contact"><i class="fas fa-envelope"></i>
+              <a href="#contact">
+                <i class="fas fa-envelope"></i>
               </a>
               <span class="title">Subscribe</span>
             </li>
@@ -82,11 +91,27 @@
       <nav class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
         <h2 class="hide">Offscreen Navigation for Small and Medium Screen</h2>
         <ul class="menu hover vertical text-left">
-          <li><a href="#about">About the Movie</a></li>
-          <li><a href="#cast">Cast</a></li>
-          <li><a href="#anniversary">20th Anniversary</a></li>
-          <li><a href="#videos">Videos</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">The Movie</a>
+          </li>
+          <li>
+            <a href="#cast">The Cast</a>
+          </li>
+          <li>
+            <a href="#anniversary">Anniversary Edition</a>
+          </li>
+          <li>
+            <a href="#videos">Trailer</a>
+          </li>
+          <li>
+            <a href="#gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="#contact">Subscribe</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -95,101 +120,115 @@
     <!-- COVER -->
     <div class="off-canvas-content" data-off-canvas-content id="home">
       <section class="grid-x" id="video-background">
-      <h2 class="hide">Video Trailer Background</h2>
+        <h2 class="hide">Video Trailer Background</h2>
+        <div class="show-for-small-only image-bg">
+          <img src="img/gallery/Image2-Large.png" alt="Stars in Black Background">
+        </div>
         <!-- <div class="cell"> -->
-          <div class="video-bg">
-            <video autoplay loop muted >
-              <source src="videos/placeholder.mp4" type="video/mp4">
-              <source src="videos/placeholder.webm" type="video/webm">
-              <img src="img/bg-back.png" alt="Background">
-            </video>
-          </div>
+        <div class="video-bg show-for-medium" data-overlay="7">
+          <video autoplay loop muted class="videoBG">
+            <source src="videos/cover.mp4" type="video/mp4">
+            <source src="videos/cover.webm" type="video/webm">
+            <source src="videos/cover.ogv" type="video/ogg">
+            <img src="img/bg-back.png" alt="Background">
+          </video>
+        </div>
         <!-- </div> -->
         <div class="cell">
           <div class="grid-x">
-              <div class="large-12 cell text-center">
+            <div class="large-12 cell text-center">
               <a href="#home">
-                  <img class="homeLogo" src="img/logo.png" width="40" alt="Logo">
-                </a>
-                </div>
+                <img class="homeLogo" src="img/logo.png" width="40" alt="Logo">
+              </a>
+            </div>
             <div class="large-12 cell text-center">
               <a href="#" class="cover_button">
                 <span class="button filled play"></span>
               </a>
             </div>
             <div class="large-12 cell text-center">
-                <a href="#about" data-smooth-scroll class="scroll-button scroll-button viewport-height-content text-white">Would you Like to Know More?<span class="icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-                </a>
-              </div>
+              <a href="#about" data-smooth-scroll class="scroll-button scroll-button viewport-height-content text-white">Would you Like to Know More?
+                <span class="icon" aria-hidden="true">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <div class="lightbox grid-x">
         <div class="videoArea">
-      <div class="videoContainer" id="cover_video">
-      <video class="videoCover" controls autoplay preload="metadata">
-          <source src="videos/placeholder.mp4" type="video/mp4">
-        </video>
-        <!-- Video Controls -->
-        <div id="controls"></div>
+          <div class="videoContainer" id="cover_video">
+            <video class="videoCover" controls preload="metadata">
+              <source src="videos/trailer.mp4" type="video/mp4">
+              <source src="videos/trailer.webm" type="video/webm">
+              <source src="videos/trailer.ogv" type="video/ogg">
+            </video>
+            <!-- Video Controls -->
+            <div id="controls"></div>
+          </div>
+          <span class="close-lightbox">CLOSE</span>
+        </div>
       </div>
-      <span class="close-lightbox">CLOSE</span>
-      </div>
-    </div>
       <!-- END COVER -->
 
       <!-- MAIN CONTENT -->
       <!-- ABOUT MOVIE -->
       <section id="about" class="bg-white light">
         <h2 class="hide">About the Movie</h2>
-          <div class="grid-x grid-container grid-padding-x">
-            <div class="medium-3 large-3 large-offset-1 cell">
-              <div class="imageContainer cell-spacing-mb30 float-center">
-                <img src="img/poster.jpg" alt="Starship Troopers Movie Poster">
-              </div>
+        <div class="grid-x grid-container grid-padding-x">
+          <div class="medium-3 large-3 large-offset-1 cell">
+            <div class="imageContainer cell-spacing-mb30 float-center">
+              <img src="img/poster.jpg" alt="Starship Troopers Movie Poster">
             </div>
-            <div class=" medium-9 large-offset-1 large-7 cell">
-              <div class="textContainer">
-                <h3><em>About</em> the Movie</h3>
-                <div>
-                  <p>Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as "the Bugs".</p>
-                  <h4>Year</h4>
-                  <p>1997</p>
-                  <h4>Runtime</h4>
-                  <p>129 minutes</p>
-                  <h4>Studio</h4>
-                  <p>Sony Pictures Home Entertainment</p>
-                  <h4>Genre</h4>
-                  <p>Action, Adventure, Sci-Fi</p>
-                  <h4>Directed by</h4>
-                  <p>Paul Verhoeven</p>
-                  <h4>Produced by</h4>
-                  <p>Jon Davison, Frances Doel, Stacy Lumbrezer, Alan Marshall, Edward Neumeier &amp; Phil Tippett</p>
-                  <h4>Cast</h4>
-                  <p>Casper Van Dien, Dina Meyer, Denise Richards, Neil Patrick Harris, Jake Busey, Clancy Brown, Seth Gilliam, Patrick Muldoon &amp; PMichael Ironside</p>
-                </div>
+          </div>
+          <div class=" medium-9 large-offset-1 large-7 cell">
+            <div class="textContainer">
+              <h3>
+                <em>About</em> the Movie</h3>
+              <div>
+                <p>Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry.
+                  Rico's military career progresses from recruit to non-commissioned officer and finally to officer against
+                  the backdrop of an interstellar war between mankind and an arachnoid species known as "the Bugs".</p>
+                <h4>Year</h4>
+                <p>1997</p>
+                <h4>Runtime</h4>
+                <p>129 minutes</p>
+                <h4>Studio</h4>
+                <p>Sony Pictures Home Entertainment</p>
+                <h4>Genre</h4>
+                <p>Action, Adventure, Sci-Fi</p>
+                <h4>Directed by</h4>
+                <p>Paul Verhoeven</p>
+                <h4>Produced by</h4>
+                <p>Jon Davison, Frances Doel, Stacy Lumbrezer, Alan Marshall, Edward Neumeier &amp; Phil Tippett</p>
+                <h4>Cast</h4>
+                <p>Casper Van Dien, Dina Meyer, Denise Richards, Neil Patrick Harris, Jake Busey, Clancy Brown, Patrick Muldoon
+                  &amp; Michael Ironside</p>
               </div>
             </div>
           </div>
+        </div>
       </section>
       <!-- END ABOUT MOVIE -->
-              
+
       <!-- CAST -->
       <section class="p0 grid-x dark" data-overlay="0" id="cast">
+        <h2 class="hide">The Cast</h2>
         <!-- Casper Van Dien BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
           <div class="cast-container-inner" data-overlay="4">
             <img src="img/casper_square.jpg" alt="Casper Van Dien">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000680/?ref_=tt_cl_t1" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
           </div>
           <div class="vertical-caption">
             <h5>Casper Van Dien</h5>
             <p>as Johnny Rico</p>
+          </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000680/?ref_=tt_cl_t1" target="_blank">
+              <h5>More Info</h5>
+            </a>
           </div>
         </div>
         <!-- END BLOCK -->
@@ -197,15 +236,15 @@
         <div class="large-3 medium-6 cell cast-container">
           <div class="cast-container-inner" data-overlay="4">
             <img src="img/dina_square.jpg" alt="Dina Meyer">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000539/?ref_=tt_cl_t2" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
           </div>
           <div class="vertical-caption">
             <h5>Dina Meyer</h5>
             <p>as Dizzy Flores</p>
+          </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000539/?ref_=tt_cl_t2" target="_blank">
+              <h5>More Info</h5>
+            </a>
           </div>
         </div>
         <!-- END BLOCK -->
@@ -213,90 +252,95 @@
         <div class="large-3 medium-6 cell cast-container">
           <div class="cast-container-inner" data-overlay="4">
             <img src="img/denise_square.jpg" alt="Denise Richards">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000612/?ref_=tt_cl_t3" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
           </div>
           <div class="vertical-caption">
             <h5>Denise Richards</h5>
             <p>as Carmen Ibanez</p>
           </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000612/?ref_=tt_cl_t3" target="_blank">
+              <h5>More Info</h5>
+            </a>
+          </div>
         </div>
         <!-- END BLOCK -->
         <!-- Neil Patrick Harris BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
-          <div class="cast-container-inner" data-overlay="4"> <img src="img/neil_square.jpg"  alt="Neil Patrick Harris">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000439/?ref_=tt_cl_t5" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
+          <div class="cast-container-inner" data-overlay="4">
+            <img src="img/neil_square.jpg" alt="Neil Patrick Harris">
           </div>
           <div class="vertical-caption">
             <h5>Neil Patrick Harris</h5>
             <p>as Carl Jenkins</p>
           </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000439/?ref_=tt_cl_t5" target="_blank">
+              <h5>More Info</h5>
+            </a>
+          </div>
         </div>
         <!-- END BLOCK -->
         <!-- Jake Busey BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
-          <div class="cast-container-inner" data-overlay="4"> <img src="img/jake_square.png"  alt="Jake Busey">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000998/?ref_=tt_cl_t4" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
+          <div class="cast-container-inner" data-overlay="4">
+            <img src="img/jake_square.png" alt="Jake Busey">
           </div>
           <div class="vertical-caption">
             <h5>Jake Busey</h5>
             <p>as Ace Levy</p>
           </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000998/?ref_=tt_cl_t4" target="_blank">
+              <h5>More Info</h5>
+            </a>
+          </div>
         </div>
         <!-- END BLOCK -->
         <!-- Patrick Muldoon BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
-          <div class="cast-container-inner" data-overlay="4"> <img src="img/patrick_square.png"  alt="Patrick Muldoon">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0005258/?ref_=tt_cl_t8" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
+          <div class="cast-container-inner" data-overlay="4">
+            <img src="img/patrick_square.png" alt="Patrick Muldoon">
           </div>
           <div class="vertical-caption">
             <h5>Patrick Muldoon</h5>
             <p>as Zander Barcalow</p>
           </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0005258/?ref_=tt_cl_t8" target="_blank">
+              <h5>More Info</h5>
+            </a>
+          </div>
         </div>
         <!-- END BLOCK -->
         <!-- Michael Ironside BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
-          <div class="cast-container-inner" data-overlay="4"> <img src="img/michael_square.png"  alt="Michael Ironside">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000461/?ref_=tt_cl_t9" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
+          <div class="cast-container-inner" data-overlay="4">
+            <img src="img/michael_square.png" alt="Michael Ironside">
           </div>
           <div class="vertical-caption">
             <h5>Michael Ironside</h5>
             <p>as Jean Rasczak</p>
           </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000461/?ref_=tt_cl_t9" target="_blank">
+              <h5>More Info</h5>
+            </a>
+          </div>
         </div>
         <!-- END BLOCK -->
         <!-- Clancy Brown BLOCK -->
         <div class="large-3 medium-6 cell cast-container">
-          <div class="cast-container-inner" data-overlay="4"> <img src="img/clancy_square.png"  alt="Clancy Brown">
-            <div class="cast-link cell">
-              <a class="cell" href="http://www.imdb.com/name/nm0000317/?ref_=tt_cl_t6" target="_blank">
-                <h5>More Info</h5>
-              </a>
-            </div>
+          <div class="cast-container-inner" data-overlay="4">
+            <img src="img/clancy_square.png" alt="Clancy Brown">
           </div>
           <div class="vertical-caption">
             <h5>Clancy Brown</h5>
             <p>as Sgt. Zim</p>
+          </div>
+          <div class="cast-link cell">
+            <a class="cell" href="http://www.imdb.com/name/nm0000317/?ref_=tt_cl_t6" target="_blank">
+              <h5>More Info</h5>
+            </a>
           </div>
         </div>
         <!-- END BLOCK -->
@@ -307,15 +351,15 @@
       <section class="bg-white light" id="anniversary">
         <div class="grid-x align-center">
           <div class="small-12 text-center sectionTitle">
-            <h3><em>20th Anniversary</em> Special Edition Box</h3>
+            <h3>
+              <em>20th Anniversary</em> Special Edition Box</h3>
             <h4>We are Launching a comemorative box with special contents.</h4>
             <h4>Click below to see what is included!</h4>
           </div>
           <div class="cell shrink imageBoxContainer">
-            
             <img class="box-image" data-interchange="[img/SpecialEdition@0,5x.png, small]
-            [img/SpecialEdition@0,75x.png, medium],[img/SpecialEdition.png, large]"
-            alt="Special Anniversary Box Content"/>
+            [img/SpecialEdition@0,75x.png, medium],[img/SpecialEdition.png, large]" alt="Special Anniversary Box Content"
+            />
             <div class="hotspots">
               <div class="hotspot">
                 <div class="trigger" data-open="shirt">
@@ -323,10 +367,11 @@
                 </div>
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="shirt" data-reveal>
                   <figure>
-                  <img data-interchange="[img/FullShirt@0,5x.png, small], [img/FullShirt@0,5x.png, medium],[img/FullShirt.png, large]" alt="Exclusive Starship Troopers Shirt" class="float-center"/>
+                    <img data-interchange="[img/FullShirt@0,5x.png, small], [img/FullShirt@0,5x.png, medium],[img/FullShirt.png, large]" alt="Exclusive Starship Troopers Shirt"
+                      class="float-center" />
                     <figcaption>Exclusive Starship Troopers 20th Anniversary Edition T-Shirt</figcaption>
                   </figure>
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <button class="close-button text" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
@@ -337,11 +382,12 @@
                 </div>
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="poster" data-reveal>
                   <figure>
-                      <img data-interchange="[img/poster@0,5x.png, small]
-                      [img/poster@0,5x.png, medium],[img/poster.png, large]" alt="Exclusive Starship Troopers Poster" class="float-center"/>
+                    <img data-interchange="[img/poster@0,5x.png, small]
+                      [img/poster@0,5x.png, medium],[img/poster.png, large]" alt="Exclusive Starship Troopers Poster" class="float-center"
+                    />
                     <figcaption>24" x 36" Exclusive Anniversary Celebration Poster</figcaption>
                   </figure>
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <button class="close-button text" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
@@ -353,10 +399,12 @@
                 <div class="small reveal" data-animation-in="fadein" data-animation-out="fadeout" id="box" data-reveal>
                   <figure>
                     <img data-interchange="[img/box@0,5x.png, small]
-                    [img/box@0,5x.png, medium],[img/box.png, large]" alt="20th Anniversary Special DVD Box" class="float-center"/>
-                    <figcaption>Two Disc Blu-ray Edition with Extra Two Hours of Content, including Deleted Scenes, Behind the Scenes Footage, Audio Commentaries and much more!</figcaption>
+                    [img/box@0,5x.png, medium],[img/box.png, large]" alt="20th Anniversary Special DVD Box" class="float-center"
+                    />
+                    <figcaption>Two Disc Blu-ray Edition with Extra Two Hours of Content, including Deleted Scenes, Behind the Scenes
+                      Footage, Audio Commentaries and much more!</figcaption>
                   </figure>
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <button class="close-button text" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">CLOSE</span>
                   </button>
                 </div>
@@ -366,22 +414,31 @@
         </div>
       </section>
       <div class="cell dark-bg callaction">
-          <a href="#contact" data-smooth-scroll><h3 class="text-center">Sign up to receive news about the release date!</h3></a>
+        <a href="#contact" data-smooth-scroll>
+          <h3 class="text-center">Sign up to receive news about the release date!</h3>
+        </a>
       </div>
       <!-- END ANNIVERSARY SECTION -->
 
       <!-- VIDEO SECTION -->
       <section class="video-section dark" id="videos" data-overlay="6">
-            <div class="grid-x grid-margin-x grid-container align-center">
-              <div class="small-12 cell prel text-center">
-                <h3 class="text-white sectionTitle"><b>Starship</b> Troopers<br>20th Anniversary <em>Trailer</em></h3>
-              </div>
-              <div class="small-12 cell">
-                <div class="video-placeholder video-box">
-                  <a href="#"> <img src="img/video_bg.jpg" alt=""> <span class="button filled play"></span> </a>
-                </div>
-              </div>
+        <div class="grid-x grid-margin-x align-center">
+          <div class="small-12 cell prel text-center">
+            <h3 class="text-white sectionTitle">
+              <b>Starship</b> Troopers
+              <br>20th Anniversary
+              <em>Trailer</em>
+            </h3>
+          </div>
+          <div class="small-12 cell">
+            <div class="video-placeholder video-box">
+              <a href="#">
+                <img src="img/gallery/Image13-Large.png" alt="">
+                <span class="video_button button filled play"></span>
+              </a>
             </div>
+          </div>
+        </div>
       </section>
       <!-- END VIDEO SECTION-->
 
@@ -389,7 +446,9 @@
       <section class="bg-white light" id="gallery">
         <div class="full grid-x">
           <div class="cell large-12 cell text-center sectionTitle">
-            <h3>Image <em>Gallery</em></h3>
+            <h3>Image
+              <em>Gallery</em>
+            </h3>
           </div>
         </div>
       </section>
@@ -398,293 +457,306 @@
         <!-- Gallery Container -->
         <div class="galleryContainer grid-x">
           <!-- Image 1 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image1">
-            <img data-interchange="[img/Image1-Small.png, small]
-            [img/img/gallery/Image1-Medium.png, medium],[img/gallery/Image1-Medium.png, large]" alt="Troops in Training"/>
+              <img srcset="img/gallery/Image1-Small.png 300w,
+                          img/gallery/Image1-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image1-Medium.png" alt="Image 1" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image1" data-reveal>
-            <img data-interchange="[img/Image1-Small.png, small]
-            [img/img/gallery/Image1-Medium.png, medium],[img/gallery/Image1-Large.png, large]" alt="Troops in Training"/>
+            <img src="img/gallery/Image1-Large.png" alt="Image 1" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 2 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image2">
-              <img data-interchange="[img/Image2-Small.png, small]
-              [img/img/gallery/Image2-Medium.png, medium],[img/gallery/Image2-Medium.png, large]" alt="Soldiers on a Cave"/>
+              <img srcset="img/gallery/Image2-Small.png 300w,
+                          img/gallery/Image2-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image2-Medium.png" alt="Image 2" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image2" data-reveal>
-            <img data-interchange="[img/Image2-Small.png, small]
-            [img/img/gallery/Image2-Medium.png, medium],[img/gallery/Image2-Large.png, large]" alt="Soldiers on a Cave" />
+            <img src="img/gallery/Image2-Large.png" alt="Image 2" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 3 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image3">
-              <img data-interchange="[img/Image3-Small.png, small]
-              [img/img/gallery/Image3-Medium.png, medium],[img/gallery/Image3-Medium.png, large]" alt="Rico on Biology Class"/>
+              <img srcset="img/gallery/Image3-Small.png 300w,
+                          img/gallery/Image3-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image2-Medium.png" alt="Image 3" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image3" data-reveal>
-            <img data-interchange="[img/Image3-Small.png, small]
-            [img/img/gallery/Image3-Medium.png, medium],[img/gallery/Image3-Large.png, large]" alt="Rico on Biology Class" />
+            <img src="img/gallery/Image3-Large.png" alt="Image 3" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 4 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image3">
-              <img data-interchange="[img/Image4-Small.png, small]
-              [img/img/gallery/Image4-Medium.png, medium],[img/gallery/Image4-Medium.png, large]" alt="Carmen at the Ship"/>
+              <img srcset="img/gallery/Image4-Small.png 300w,
+                          img/gallery/Image4-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image4-Medium.png" alt="Image 4" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image4" data-reveal>
-            <img data-interchange="[img/Image4-Small.png, small]
-            [img/img/gallery/Image4-Medium.png, medium],[img/gallery/Image4-Large.png, large]" alt="Carmen at the Ship" />
+            <img src="img/gallery/Image4-Large.png" alt="Image 4" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
-            <!-- Image 5 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <!-- Image 5 -->
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image5">
-              <img data-interchange="[img/Image5-Small.png, small]
-              [img/img/gallery/Image5-Medium.png, medium],[img/gallery/Image5-Medium.png, large]" alt="Rico on Class"/>
+              <img srcset="img/gallery/Image5-Small.png 300w,
+                          img/gallery/Image5-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image4-Medium.png" alt="Image 5" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image5" data-reveal>
-            <img data-interchange="[img/Image5-Small.png, small]
-            [img/img/gallery/Image5-Medium.png, medium],[img/gallery/Image5-Large.png, large]" alt="Rico on Class" />
+            <img src="img/gallery/Image5-Large.png" alt="Image 5" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 6 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image6">
-              <img data-interchange="[img/Image6-Small.png, small]
-              [img/img/gallery/Image6-Medium.png, medium],[img/gallery/Image6-Medium.png, large]" alt="Carmen Smilling"/>
+              <img srcset="img/gallery/Image6-Small.png 300w,
+                          img/gallery/Image6-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image6-Medium.png" alt="Image 6" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image6" data-reveal>
-            <img data-interchange="[img/Image6-Small.png, small]
-            [img/img/gallery/Image6-Medium.png, medium],[img/gallery/Image6-Large.png, large]" alt="Carmen Smilling" />
+            <img src="img/gallery/Image6-Large.png" alt="Image 6" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 7 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image7">
-              <img data-interchange="[img/Image7-Small.png, small]
-              [img/img/gallery/Image7-Medium.png, medium],[img/gallery/Image7-Medium.png, large]" alt="Base at Bug Planet"/>
+              <img srcset="img/gallery/Image7-Small.png 300w,
+                          img/gallery/Image7-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image7-Medium.png" alt="Image 6" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image7" data-reveal>
-            <img data-interchange="[img/Image7-Small.png, small]
-            [img/img/gallery/Image7-Medium.png, medium],[img/gallery/Image7-Large.png, large]" alt="Base at Bug Planet" />
+            <img src="img/gallery/Image7-Large.png" alt="Image 7" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 8 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image8">
-              <img data-interchange="[img/Image8-Small.png, small]
-              [img/img/gallery/Image8-Medium.png, medium],[img/gallery/Image8-Medium.png, large]" alt="Carmen Flying Ship"/>
+              <img srcset="img/gallery/Image8-Small.png 300w,
+                          img/gallery/Image8-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image8-Medium.png" alt="Image 8" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image8" data-reveal>
-            <img data-interchange="[img/Image8-Small.png, small]
-            [img/img/gallery/Image8-Medium.png, medium],[img/gallery/Image8-Large.png, large]" alt="Carmen Flying Ship" />
+            <img src="img/gallery/Image8-Large.png" alt="Image 8" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 9 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image9">
-              <img data-interchange="[img/Image9-Small.png, small]
-              [img/img/gallery/Image9-Medium.png, medium],[img/gallery/Image9-Medium.png, large]" alt="Rico Watching the News About Buenos Aires"/>
+              <img srcset="img/gallery/Image9-Small.png 300w,
+                          img/gallery/Image9-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image9-Medium.png" alt="Image 9" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image9" data-reveal>
-            <img data-interchange="[img/Image9-Small.png, small]
-            [img/img/gallery/Image9-Medium.png, medium],[img/gallery/Image9-Large.png, large]" alt="Rico Watching the News About Buenos Aires" />
+            <img src="img/gallery/Image9-Large.png" alt="Image 9" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 10 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image10">
-              <img data-interchange="[img/Image10-Small.png, small]
-              [img/img/gallery/Image10-Medium.png, medium],[img/gallery/Image10-Medium.png, large]" alt="Ships in Space"/>
+              <img srcset="img/gallery/Image10-Small.png 300w,
+                          img/gallery/Image10-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image10-Medium.png" alt="Image 10" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image10" data-reveal>
-            <img data-interchange="[img/Image10-Small.png, small]
-            [img/img/gallery/Image10-Medium.png, medium],[img/gallery/Image10-Large.png, large]" alt="Ships in Space" />
+            <img src="img/gallery/Image10-Large.png" alt="Image 10" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 11 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image11">
-              <img data-interchange="[img/Image11-Small.png, small]
-              [img/img/gallery/Image11-Medium.png, medium],[img/gallery/Image11-Medium.png, large]" alt="Rico, Carmen and Carl Shaking Hands"/>
+              <img srcset="img/gallery/Image11-Small.png 300w,
+                          img/gallery/Image11-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image11-Medium.png" alt="Image 11" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image11" data-reveal>
-            <img data-interchange="[img/Image11-Small.png, small]
-            [img/img/gallery/Image11-Medium.png, medium],[img/gallery/Image11-Large.png, large]" alt="Rico, Carmen and Carl Shaking Hands" />
+            <img src="img/gallery/Image11-Large.png" alt="Image 11" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 12 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image12">
-              <img data-interchange="[img/Image12-Small.png, small]
-              [img/img/gallery/Image12-Medium.png, medium],[img/gallery/Image12-Medium.png, large]" alt="Solider Shooting at Bug"/>
+              <img srcset="img/gallery/Image12-Small.png 300w,
+                          img/gallery/Image12-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image12-Medium.png" alt="Image 12" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image12" data-reveal>
-            <img data-interchange="[img/Image12-Small.png, small]
-            [img/img/gallery/Image12-Medium.png, medium],[img/gallery/Image12-Large.png, large]" alt="Solider Shooting at Bug" />
+            <img src="img/gallery/Image12-Large.png" alt="Image 12" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 13 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image13">
-              <img data-interchange="[img/Image13-Small.png, small]
-              [img/img/gallery/Image13-Medium.png, medium],[img/gallery/Image13-Medium.png, large]" alt="Rico Running from Bug"/>
+              <img srcset="img/gallery/Image13-Small.png 300w,
+                          img/gallery/Image13-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image13-Medium.png" alt="Image 13" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image13" data-reveal>
-            <img data-interchange="[img/Image13-Small.png, small]
-            [img/img/gallery/Image13-Medium.png, medium],[img/gallery/Image13-Large.png, large]" alt="Rico Running from Bug" />
+            <img src="img/gallery/Image13-Large.png" alt="Image 13" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 14 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image14">
-              <img data-interchange="[img/Image14-Small.png, small]
-              [img/img/gallery/Image14-Medium.png, medium],[img/gallery/Image14-Medium.png, large]" alt="Bugs on Planet Bug"/>
+              <img srcset="img/gallery/Image14-Small.png 300w,
+                          img/gallery/Image14-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image14-Medium.png" alt="Image 14" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image14" data-reveal>
-            <img data-interchange="[img/Image14-Small.png, small]
-            [img/img/gallery/Image14-Medium.png, medium],[img/gallery/Image14-Large.png, large]" alt="Bugs on Planet Bug" />
+            <img src="img/gallery/Image14-Large.png" alt="Image 14" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 15 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image15">
-              <img data-interchange="[img/Image15-Small.png, small]
-              [img/img/gallery/Image15-Medium.png, medium],[img/gallery/Image15-Medium.png, large]" alt="Rico and Soldiers Listening to Instructions"/>
+              <img srcset="img/gallery/Image15-Small.png 300w,
+                          img/gallery/Image15-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image9-Medium.png" alt="Image 15" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image15" data-reveal>
-            <img data-interchange="[img/Image15-Small.png, small]
-            [img/img/gallery/Image15-Medium.png, medium],[img/gallery/Image15-Large.png, large]" alt="Rico and Soldiers Listening to Instructions" />
+            <img src="img/gallery/Image15-Large.png" alt="Image 15" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 16 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image16">
-              <img data-interchange="[img/Image16-Small.png, small]
-              [img/img/gallery/Image16-Medium.png, medium],[img/gallery/Image16-Medium.png, large]" alt="Giant Bug"/>
+              <img srcset="img/gallery/Image16-Small.png 300w,
+                          img/gallery/Image16-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image16-Medium.png" alt="Image 9" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image16" data-reveal>
-            <img data-interchange="[img/Image16-Small.png, small]
-            [img/img/gallery/Image16-Medium.png, medium],[img/gallery/Image16-Large.png, large]" alt="Giant Bug" />
+            <img src="img/gallery/Image16-Large.png" alt="Image 16" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 17 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image17">
-              <img data-interchange="[img/Image17-Small.png, small]
-              [img/img/gallery/Image17-Medium.png, medium],[img/gallery/Image17-Medium.png, large]" alt="Soldiers Looking Up"/>
+              <img srcset="img/gallery/Image17-Small.png 300w,
+                        img/gallery/Image17-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                        (max-width: 64em) 512px,
+                        (min-width: 64em) 25%" src="img/gallery/Image17-Medium.png" alt="Soldiers Looking Up" />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image17" data-reveal>
-            <img data-interchange="[img/Image17-Small.png, small]
-            [img/img/gallery/Image17-Medium.png, medium],[img/gallery/Image17-Large.png, large]" alt="Soldiers Looking Up" />
+            <img src="img/gallery/Image17-Large.png" alt="Soldiers Looking Up" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <!-- Image 18 -->
-          <div class="galleryItem small-6 medium-4 large-2">
+          <div class="galleryItem small-6 medium-4 large-2 xlarge-2">
             <a data-open="image18">
-              <img data-interchange="[img/Image18-Small.png, small]
-              [img/img/gallery/Image18-Medium.png, medium],[img/gallery/Image18-Medium.png, large]" alt="Military Base on Planet Bug9"/>
+              <img srcset="img/gallery/Image18-Small.png 300w,
+                          img/gallery/Image18-Medium.png 600w" sizes="(max-width: 40em) 500px,
+                          (max-width: 64em) 512px,
+                          (min-width: 64em) 25%" src="img/gallery/Image18-Medium.png" alt="Military Base on Planet Bug"
+              />
             </a>
           </div>
           <div class="reveal medium" data-animation-in="fadein" data-animation-out="fadeout" id="image18" data-reveal>
-            <img data-interchange="[img/Image18-Small.png, small]
-            [img/img/gallery/Image18-Medium.png, medium],[img/gallery/Image18-Large.png, large]" alt="Military Base on Planet Bug" />
+            <img src="img/gallery/Image18-Large.png" alt="Military Base on Planet Bug" />
             <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <!-- End Gallery Container -->
         </div>
-        <!-- End Gallery Container -->
-
-        <!-- Gallery Overlay -->
-        <div class="js-gallery-overlay gallery-overlay reveal-overlay">
-          <!-- Gallery modal -->
-          <div class="js-gallery-reveal gallery-reveal reveal" id="galleryModal" data-reveal data-overlay="true">
-            <h2 class="js-modal-author modal-author"></h2>
-            <img class="js-modal-preview modal-preview" src="" alt="" />
-            <button class="js-close-button close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">CLOSE</span>
-            </button>
-          </div><!-- end Gallery modal -->
-        </div><!-- end Gallery overlay -->
       </section>
       <!-- END SECTION -->
 
       <!-- SIGN UP SECTION -->
       <section id="contact" class="light-bg contact light">
+        <h2 class="hide">Subscribe for News</h2>
         <div class="grid-x">
           <div class="large-10 cell form-section float-center">
             <div class="large-12 cell text-center sectionTitle">
-              <h3><em>Sign Up</em> for News</h3>
+              <h3>
+                <em>Sign Up</em> for News</h3>
             </div>
             <div class="form">
-              <form role="form" id="contactForm" data-toggle="validator" class="grid-x grid-margin-x">
+              <form id="contactForm" data-toggle="validator" class="grid-x grid-margin-x">
                 <!-- <div class=""> -->
-                  <div class="large-5 medium-6 cell">
-                    <input type="text" id="name" placeholder="Name*" required>
-                  </div>
-                  <div class="large-5 medium-6 cell">
-                    <input type="email" id="email" placeholder="Email*" required>
-                  </div>
-                  <div class="large-2 medium-12 cell">
-                    <button type="submit" id="form-submit" class="button submit filled">Submit</button>
-                  </div>
+                <div class="large-5 medium-6 cell">
+                  <label>Name
+                  <input type="text" id="name" required>
+                  </label>
+                </div>
+                <div class="large-5 medium-6 cell">
+                  <label>Email
+                    <input type="email" id="email" required>
+                  </label>
+                </div>
+                <div class="large-2 medium-12 cell">
+                  <button type="submit" id="form-submit" class="button submit filled">Submit</button>
+                </div>
                 <!-- </div> -->
               </form>
             </div>
@@ -699,10 +771,11 @@
   <!-- END INNER CONTAINER -->
 
   <!-- FOOTER -->
-  <footer class="footer" data-overlay="0">
+  <footer class="footer">
     <div class="grid-x">
-      <div class="medium-4 cell text-center">
-        <p class="copyright">&copy; 2018. Made by <a href="http://www.jullianabauer.com">Julliana Bauer</a>. All Rights Reserved.</p>
+      <div class="cell text-center">
+        <p class="copyright">&copy; 2018. Made by
+          <a href="http://www.jullianabauer.com">Julliana Bauer</a>. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -721,9 +794,11 @@
   <script src="js/vendor/foundation.js"></script>
   <script src="js/app.js"></script>
   <script src="js/vendor/foundation.smoothScroll.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
 
   <!-- END SCRIPTS -->
 
 </body>
+
 </html>
