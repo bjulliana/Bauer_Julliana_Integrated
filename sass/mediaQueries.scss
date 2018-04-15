@@ -56,7 +56,7 @@ min-width 40em
 
 @media screen and(min-width: 40em) {
 	section {
-		padding: 4em;
+		padding: 4em 2em;
 	}
 	.sectionTitle {
 		padding-bottom: 4rem;
@@ -83,7 +83,7 @@ min-width 40em
 		padding-bottom: 3rem;
 	}
 	.homeLogo {
-		width: 40%;
+		width: 30%;
 	}
 	.callaction {
 		&:hover h3 {
@@ -92,7 +92,7 @@ min-width 40em
 	}
 	.reveal-overlay {
 		.reveal {
-			margin-top: 5%;
+			margin-top: 3%;
 		}
 		figcaption {
 			bottom: 0;
@@ -105,14 +105,10 @@ min-width 50em
 ----------------------------------------------*/
 
 @media screen and(min-width: 50em) {
-	// #video-background {
-	// 	height: 400px;
-	// }
 	.playButton {
 		padding-top: 40px;
 	}
 	header {
-		// border-bottom: 1px solid rgba(222, 222, 222, 0.4);
 		&.small .logo {
 			width: 70%;
 		}
@@ -136,20 +132,17 @@ min-width 50em
 min-width 60em
 ----------------------------------------------*/
 @media screen and(min-width: 60em) {
-	// #video-background {
-	// 	height: 350px;
-	// }
 	.button.play {
 		width: 5.5rem;
 		height: 5.5rem;
 	}
-	#cover_video video {
-		width: 70%;
-		margin-top: 10%;
-	}
 	.close-lightbox {
-		right: 15%;
-		top: 17%;
+		right: 10%;
+		// top: 20%;
+	}
+	.grid-container {
+		padding-right: 2em;
+		padding-left: 2em;
 	}
 }
 
@@ -171,7 +164,7 @@ min-width 64em
 		padding-bottom: 10rem;
 	}
 	.reveal.small {
-		width: 50%;
+		width: 40%;
 		max-width: 75rem; 
 	}
 }
@@ -181,19 +174,12 @@ min-width 75em
 ----------------------------------------------*/
 
 @media screen and(min-width: 75em) {
-	// #video-background {
-	// 	height: 700px;
-	// }
 	.playButton {
 		padding-top: 70px;
 	}
-	#cover_video video {
-		width: 60%;
-		margin-top: 5%;
-	}
 	.close-lightbox {
-		right: 20%;
-		top: 10.5%;
+		right: 10%;
+		// top: 10.4%;
 	}
 }
 

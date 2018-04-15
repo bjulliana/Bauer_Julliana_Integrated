@@ -56,43 +56,15 @@
 
   //Change Lateral Menu Color on Scroll
   window.addEventListener('scroll', function() {
+    header.classList.remove('dark-menu');
     lightSection.forEach(el => {
       let sectionOffset = el.getBoundingClientRect();
       if(sectionOffset.top < (menu.offsetHeight) && sectionOffset.bottom > (menu.offsetHeight/2)) {
         header.classList.add('dark-menu');
       }
-      else {
-        header.classList.remove('dark-menu');
-      }
     });
   });
 
-
-  // //Change Lateral Menu Color on Scroll - WORKING
-  // function changeHeaderColor() {
-  //   let aboutOffset = aboutSection.getBoundingClientRect();
-  //   let galleryOffset = gallerySection.getBoundingClientRect();
-  //   let anniversaryOffset = anniversarySection.getBoundingClientRect();
-  //   let contactOffset = contactSection.getBoundingClientRect();
-
-  //   if(aboutOffset.top < (menu.offsetHeight) && aboutOffset.bottom > (menu.offsetHeight/2)) {
-  //     header.classList.add('dark-menu');
-  //   }
-  //   else if(galleryOffset.top < (menu.offsetHeight) && galleryOffset.bottom > (menu.offsetHeight/2)) {
-  //     header.classList.add('dark-menu');
-  //   }
-  //   else if(anniversaryOffset.top < (menu.offsetHeight) && anniversaryOffset.bottom > (menu.offsetHeight/2)) {
-  //     header.classList.add('dark-menu');
-  //   }
-  //   else if(contactOffset.top < (menu.offsetHeight) && contactOffset.bottom > (menu.offsetHeight/2)) {
-  //     header.classList.add('dark-menu');
-  //   }
-  //   else {
-  //     header.classList.remove('dark-menu');
-  //   }
-  // }
-
-  // window.addEventListener('scroll', changeHeaderColor);
   mobileIcon.addEventListener('click', mobileIconChange);
   canvasOverlay.addEventListener('click', mobileIconChange);
   window.addEventListener('scroll', backtoTop);
